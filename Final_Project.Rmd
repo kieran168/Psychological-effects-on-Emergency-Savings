@@ -1,9 +1,11 @@
 ---
-title: "Untitled"
+title: "KYuen_Final Project_Financial Literacy"
+font-family: 'Corbel'
+author: Kieran Yuen
 output: github_document
 ---
 
-```{r setup, include=FALSE}
+```{r Setup}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

@@ -1,5 +1,10 @@
-Untitled
+KYuen\_Final Project\_Financial Literacy
 ================
+Kieran Yuen
+
+``` r
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ## GitHub Documents
 
