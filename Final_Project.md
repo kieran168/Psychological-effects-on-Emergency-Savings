@@ -26,6 +26,8 @@ the dependent variable and use the objective questions as independent
 variables. I would expect to see that those with correct answers in the
 objective questions should have an emergency fund*
 
+What type of people will have an emergency fund?
+
 # Introduction
 
 # Literature Review
@@ -128,14 +130,89 @@ without a college degree.
 ### Findings
 
 The study found that confidence in both financial knowledge and
-financial ability are importanct influences on positive financial
+financial ability are important influences on positive financial
 behaviors for those without a college degree.
 
 ## Article \#4
 
-Henager, R., Cude, B.J. Financial Literacy of High School Graduates:
-Long- and Short-Term Financial Behavior by Age Group. J Fam Econ Iss 40,
-564–575 (2019). <https://doi.org/10.1007/s10834-019-09626-2>
+Henager, Robin and Cude, Brenda J. Financial Literacy and Long- and
+Short-Term Financial Behavior in Different Age Groups. Journal of
+Financial Counseling and Planning Vol 27, 3-19 (2016).
+<https://connect.springerpub.com/content/sgrjfcp/27/1/3>
+
+### Data
+
+2012 National Financial Capability Study (NFCS) State-by-State Survey
+Instrument sponsored by the Financial Industry Regulation Authority
+(FINRA)
+
+### Econometric Techniques
+
+Ordered logistic regressions were run to analyze the key dependent
+variables (when the dependent variable was an index of behaviors; either
+0-3 or 0-4). The Variance Inflation Factor (VIF) test was run to check
+for multicollinearity between the independent variables used in this
+study. The VIF test indicated no multicollinearity. Dependent variables
+were both long-term and short-term financial behaviors.
+
+### What question is addressed?
+
+Examine the influence of financial literacy and financial education on
+the long- and short-term financial behaviors, among various age groups
+(18-24, 25-34, 35-44, 45-54, 55-64, 65+).
+
+### Findings
+
+The study found that both objective and subjective financial literacy
+were positively associated with long- and short-term financial
+behaviors.
+
+In the younger age groups subjective financial knowledge had a stronger
+correlation than either objective financial knowledge or subjective
+financial management ability. This means that confidence in one’s
+financial literacy mattered more when it came to making the right
+financial decisions than actual objective knowledge of the financial
+topic.
+
+In the older age groups, objective financial knowledge was more strongly
+related to long-term financial behavior than either of the other two
+measures of financial literacy.This means the older age groups,
+objective financial knowledge translated to financial smarter decisions
+with their money than simply confidence in one’s own self.
+
+## Article \#5
+
+Birkenmaier J, Fu Q. The Association of Alternative Financial Services
+Usage and Financial Access: Evidence from the National Financial
+Capability Study. Journal of Family and Economic Issues.
+2016;37(3):450-460. Accessed December 6, 2020.
+<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1590468&site=ehost-live>
+
+### Data
+
+2012 National Financial Capability Study (NFCS) State-by-State Survey
+Instrument sponsored by the Financial Industry Regulation Authority
+(FINRA)
+
+### Econometric Techniques
+
+OLS
+
+### What question is addressed?
+
+Association of financial access and alternative financial services
+
+### Findings
+
+Results suggested that being unbanked was positively associated with AFS
+usage after controlling for other covariates
+
+## Article \#6
+
+Nicolini G, Cude BJ. The Influence of Financial Well-Being on Pawnshop
+Use. Journal of Consumer Affairs. 2019;53(4):1674-1692. Accessed
+December 6, 2020.
+<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1845572&site=ehost-live>
 
 ### Data
 
@@ -145,24 +222,49 @@ Instrument sponsored by the Financial Industry Regulation Authority
 
 ### Econometric Techniques
 
-Ordered logistic regressions were run to analyze the key dependent
-variables (when the dependent variable was an index of behaviors; either
-0-3 or 0-4).
-
-Logistic Regression was used for when the dependent variable was the
-short-term variable budgeting.
-
 ### What question is addressed?
 
-Examine the influence of financial literacy and financial education on
-the long- and short-term financial behaviors, by age group for those
-without a college degree.
+The influence of financial well-being on pawnshop use. Financial
+well-being, based on the Consumer Financial Protection Bureau’s
+definition
 
 ### Findings
 
-The study found that confidence in both financial knowledge and
-financial ability are importanct influences on positive financial
-behaviors for those without a college degree.
+A higher financial well-being reduced the odds of pawnshop use by 17%,
+even after controlling for having a bank account, having a credit card,
+being financially overconfident, proximity to local pawnshops, and
+selected demographic characteristics
+
+## Article \#7
+
+Despard MR, Friedline T, Martin-West S. Why Do Households Lack Emergency
+Savings? The Role of Financial Capability. Journal of Family and
+Economic Issues. 2020;41(3):542-557. Accessed December 6, 2020.
+<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1848145&site=ehost-live>
+
+### Data
+
+2009, 2012, 2015, and 2018 National Financial Capability Study (NFCS)
+State-by-State Survey Instrument sponsored by the Financial Industry
+Regulation Authority (FINRA)
+
+### Econometric Techniques
+
+### What question is addressed?
+
+Why Do Households Lack Emergency Savings? The Role of Financial
+Capability
+
+### Findings
+
+Subjective financial knowledge, financial confidence, and savings
+account ownership, but not objective financial knowledge, were
+significant and consistent predictors of having an emergency fund.
+Savings account ownership was the strongest predictor, accounting for an
+increase in the probability of having an emergency fund of 25% to 29%
+across study years. Adding homeownership and ability to cover expenses
+to the models increased the proportion of variance explained by an
+average of 29%.
 
 # Means (simple graphs, correlations, differences of means)
 
