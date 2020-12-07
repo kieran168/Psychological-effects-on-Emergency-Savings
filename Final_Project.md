@@ -2,23 +2,7 @@ Financial Literacy’s Impact on Financial Choices
 ================
 Kieran Yuen
 
-# Possible Hypotheses
-
-What is the impact of consumerism on a person/household’s personal
-finances?
-
-What is the impact of consumerism on debt?
-
-How does a course in personal finance in high school impact a person’s
-finances in the long-term? short-term?
-
-How much more income is earned by someone who has taken a personal
-finance course in high school? In college? after graduating from
-college?
-
-How much more money is spent by people who use credit cards more often
-on a daily basis versus people who use paper cash more often on a daily
-basis?
+# Hypotheses
 
 Someone with great financial knowledge should have the understanding and
 foresight to save for the future/emergency fund. *Make emergency fund
@@ -28,7 +12,72 @@ objective questions should have an emergency fund*
 
 What type of people will have an emergency fund?
 
+What kind of effect does mental well-being have in determining if
+someone has an emergency fund?
+
+How does how you feel about your finances affect whether you have an
+emergency fund or not?
+
 # Introduction
+
+## Overall goal
+
+To find possible reasons why someone might not have an emergency fund
+and propose ideas on how to address those issues to
+encourage/incentivize people to have an emergency fund.
+
+## Dependent variable
+
+(J5) Emergency fund (Yes/No) *Have you set aside emergency or rainy day
+funds that would cover your expenses for 3 months, in case of sickness,
+job loss, economic downturn, or other emergencies?* Code this as 0/1,
+exclude don’t know and prefer not to answer
+
+## Independent variables (rate 1-10)
+
+(J1) Personal Financial Condition *Overall, thinking of your assets,
+debts and savings, how satisfied are you with your current personal
+financial condition?* 10 = Extremely Satisfied 1 = Not at all Satisfied
+
+(J33\_40) Anxiety about my personal finances (rate 1-7) *How strongly do
+you agree or disagree with the following statements? - Thinking about my
+personal finances can make me feel anxious* 7 = Strongly agree 1 =
+Strongly disagree
+
+(J33\_41) Personal finances make me feel stressed (rate 1-7) *How
+strongly do you agree or disagree with the following statements? -
+Discussing my finances can make my heart race or make me feel stressed*
+7 = Strongly agree 1 = Strongly disagree
+
+(G23) Too much debt right now in my life (rate 1-7) *How strongly do you
+agree or disagree with the following statement? - I have too much debt
+right now* 7 = Strongly agree 1 = Strongly disagree
+
+## Other variables to interact with ind. var.
+
+### Interaction \#1
+
+Objective financial knowledge:anxiety/stressed about personal finances
+
+Someone who objectively understands finances (but not necissarily
+confident) but is stressed or gets anixety from thinking about.
+
+How likely are they to have an emergency fund?
+
+### Interaction \#2
+
+Subjective financial knowledge:anxiety/stressed about personal finances
+
+Someone who is confident in their knowledge about personal finance (but
+not necissarily objectively knowledgeable about it) but is stressed/not
+stressed or gets anixety from thinking about.
+
+How likely are they to have an emergency fund?
+
+# Questions to consider
+
+Is “feeling confident” the same as “not feeling anxious” or “feeling
+great about my personal finance situation?”
 
 # Literature Review
 
@@ -266,13 +315,76 @@ across study years. Adding homeownership and ability to cover expenses
 to the models increased the proportion of variance explained by an
 average of 29%.
 
+## Article \#8
+
+Babiarz P, Robb CA. Financial Literacy and Emergency Saving. Journal of
+Family and Economic Issues. 2014;35(1):40-50. Accessed December 6, 2020.
+<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1430913&site=ehost-live>
+
+### Data
+
+2009, 2012, 2015, and 2018 National Financial Capability Study (NFCS)
+State-by-State Survey Instrument sponsored by the Financial Industry
+Regulation Authority (FINRA)
+
+### Econometric Techniques
+
+### What question is addressed?
+
+Why Do Households Lack Emergency Savings? The Role of Financial
+Capability
+
+### Findings
+
+Subjective financial knowledge, financial confidence, and savings
+account ownership, but not objective financial knowledge, were
+significant and consistent predictors of having an emergency fund.
+Savings account ownership was the strongest predictor, accounting for an
+increase in the probability of having an emergency fund of 25% to 29%
+across study years. Adding homeownership and ability to cover expenses
+to the models increased the proportion of variance explained by an
+average of 29%.
+
 # Means (simple graphs, correlations, differences of means)
 
 # Simple Regressions
 
+Do logistic regression on
+
 # Complicated Regressions
 
 # Conclusion (Explain Results)
+
+*Add a statment about how this fits into the larger picture of financial
+literacy* *How this study can continue to be studied/what I can further
+study*
+
+# Limitations
+
+We do not know where people are holding their 3 months of emergency
+funds. Whether that is in their savings account or invested in the stock
+market.
+
+# Questions for Professor Foster
+
+What is confirmatory factor analysis? is this the same where Lasso tells
+us which variables are most important? Per Kevin, it is the same as the
+variable importance selection tools we have used as in class.
+
+Per Kevin, when I run the objective and subjective financial knowledge
+questions I should be able to see the same results as what I saw in
+previous studies.
+
+Logit can give misleading results when we have “factors.”
+
+Per Kevin, Income would be endogenous to what we would spend it on
+
+The reason macro data is problematic is because the data is wider than
+it is longer. That is because macro data is collected on a quarterly
+level so even if we go back all the way to 1955. there would not be
+enough data.
+
+What should I do with the “weights” in my data?
 
 ``` r
 library(haven)
