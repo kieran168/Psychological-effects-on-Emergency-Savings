@@ -34,8 +34,13 @@ emergency fund or not?
 ## Dataset used
 
 The dataset I used is the National Financial Capability Study (NFCS)
-which was funded by the FINRA Investor Education and conducted by ARC
-Research. We will be focusing on one financial decision made by
+which was funded by the FINRA Investor Education Foundation and
+conducted by ARC Research. The overall goal of this study is to assess
+financial capability on certain key metrics and evaluate how these vary
+with underlying demographic, behavioral, attitudinal and financial
+literacy characteristics. I chose this dataset as it focuses on
+
+This research will be focusing on one financial decision made by
 households, and that is the decision to save an emergency fund or not.
 
 ## Overall goal
