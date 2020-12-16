@@ -24,7 +24,7 @@ How does how you feel about your finances affect whether you have an emergency f
 
 # Introduction
 ## Dataset used
-The dataset I used is the National Financial Capability Study (NFCS) which was funded by the FINRA Investor Education Foundation and conducted by ARC Research. The overall goal of this study is to assess financial capability on certain key metrics and evaluate how these vary with underlying demographic, behavioral, attitudinal and financial literacy characteristics. I chose this dataset as it focuses on a
+The dataset I used is the National Financial Capability Study (NFCS) which was funded by the FINRA Investor Education Foundation and conducted by ARC Research. The data can be downloaded here: https://www.usfinancialcapability.org/downloads.php. Thgis study has been conducted in 2009, 2012, 2015, and 2018. I will be using the 2018 dataset. The overall goal of this study is to assess financial capability on certain key metrics and evaluate how these vary with underlying demographic, behavioral, attitudinal and financial literacy characteristics. I chose this dataset as it focuses on financial decisions being made in a household, which is the local-level data I was looking for to address my hypothesis.
 
 This research will be focusing on one financial decision made by households, and that is the decision to save an emergency fund or not.
 
