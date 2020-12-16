@@ -2,6 +2,10 @@ Mental well-being’s effects on saving for an emergency fund
 ================
 Kieran Yuen
 
+# Steps
+
+1)  Do
+
 # Hypotheses
 
 Someone with great financial knowledge should have the understanding and
@@ -26,6 +30,13 @@ How does how you feel about your finances affect whether you have an
 emergency fund or not?
 
 # Introduction
+
+## Dataset used
+
+The dataset I used is the National Financial Capability Study (NFCS)
+which was funded by the FINRA Investor Education and conducted by ARC
+Research. We will be focusing on one financial decision made by
+households, and that is the decision to save an emergency fund or not.
 
 ## Overall goal
 

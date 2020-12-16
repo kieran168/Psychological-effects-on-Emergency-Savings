@@ -4,6 +4,9 @@ font-family: 'Corbel'
 author: Kieran Yuen
 output: github_document
 ---
+# Steps
+1) Do 
+
 # Hypotheses
 
 
@@ -20,6 +23,9 @@ How does how you feel about your finances affect whether you have an emergency f
 
 
 # Introduction
+## Dataset used
+The dataset I used is the National Financial Capability Study (NFCS) which was funded by the FINRA Investor Education and conducted by ARC Research. We will be focusing on one financial decision made by households, and that is the decision to save an emergency fund or not.
+
 ## Overall goal
 To find possible reasons why someone might not have an emergency fund and propose ideas on how to address those issues to encourage/incentive people to have an emergency fund.
 
