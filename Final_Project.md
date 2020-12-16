@@ -1,4 +1,4 @@
-Financial Literacy’s Impact on Financial Choices
+Mental well-being’s effects on saving for an emergency fund
 ================
 Kieran Yuen
 
@@ -7,8 +7,15 @@ Kieran Yuen
 Someone with great financial knowledge should have the understanding and
 foresight to save for the future/emergency fund. *Make emergency fund
 the dependent variable and use the objective questions as independent
-variables. I would expect to see that those with correct answers in the
-objective questions should have an emergency fund*
+variables.*
+
+*In addition, maybe we can find correlations between our independent
+variables and some of the objective questions. These correlations might
+tell us something. For example, seeing if there is a correlation between
+someone who feels a lot of stress just thinking about finances but
+answered the objective questions correctly. I would expect to see that
+those with correct answers in the objective questions should have an
+emergency fund*
 
 What type of people will have an emergency fund?
 
@@ -23,8 +30,8 @@ emergency fund or not?
 ## Overall goal
 
 To find possible reasons why someone might not have an emergency fund
-and propose ideas on how to address those issues to
-encourage/incentivize people to have an emergency fund.
+and propose ideas on how to address those issues to encourage/incentive
+people to have an emergency fund.
 
 ## Dependent variable
 
@@ -357,7 +364,8 @@ Do logistic regression on
 
 *Add a statment about how this fits into the larger picture of financial
 literacy* *How this study can continue to be studied/what I can further
-study*
+study* *Understand that we cannot know everything, there are limitations
+to what we can know and what we can even find out*
 
 # Limitations
 
