@@ -69,7 +69,7 @@ say” were not included in the analysis.
 #### Independent Variables
 
 *The four key independent variables had (INSERT ANSWER HERE)
-correlations with one anohter, indicating that the four varialbes were
+correlations with one another, indicating that the four variables were
 not likely measuring the same thing. The correlation coefficient was
 X.XX. This means that they both had low correlation but both affected
 the likelihood of someone having an emergnecy fund or not - ALSO
@@ -156,43 +156,6 @@ To find possible reasons why someone might not have an emergency fund
 and propose ideas on how to address those issues to encourage/incentive
 people to have an emergency fund.
 
-# Variables
-
-## Dependent variable
-
-(J5) Emergency fund (Yes/No) *Have you set aside emergency or rainy day
-funds that would cover your expenses for 3 months, in case of sickness,
-job loss, economic downturn, or other emergencies?* Code this as 0/1,
-exclude don’t know and prefer not to answer
-
-## Independent variables (rate 1-10)
-
-(J1) Personal Financial Condition *Overall, thinking of your assets,
-debts and savings, how satisfied are you with your current personal
-financial condition?* 10 = Extremely Satisfied 1 = Not at all Satisfied
-
-8-10 = High\_Finances 4-7 = Moderate\_Finances 1-3 = Low\_Finances
-
-(J33\_40) Anxiety about my personal finances (rate 1-7) *How strongly do
-you agree or disagree with the following statements? - Thinking about my
-personal finances can make me feel anxious* 7 = Strongly agree 1 =
-Strongly disagree
-
-6-7 = High\_Anxiety 3-5 = Moderate\_Anxiety 1-2 = Low\_Anxiety
-
-(J33\_41) Personal finances make me feel stressed (rate 1-7) *How
-strongly do you agree or disagree with the following statements? -
-Discussing my finances can make my heart race or make me feel stressed*
-7 = Strongly agree 1 = Strongly disagree
-
-6-7 = High\_Stress 3-5 = Moderate\_Stress 1-2 = Low\_Stress
-
-(G23) Too much debt right now in my life (rate 1-7) *How strongly do you
-agree or disagree with the following statement? - I have too much debt
-right now* 7 = Strongly agree 1 = Strongly disagree
-
-6-7 = High\_Debt 3-5 = Moderate\_Debt 1-2 = Low\_Debt
-
 ## Other variables to interact with ind. var.
 
 ### Interaction \#1
@@ -215,16 +178,6 @@ stressed or gets anixety from thinking about.
 How likely are they to have an emergency fund?
 
 # Steps for data
-
-1)  Decide how to parse out the independent variables (answers range
-    from 1-7 and 1-10). So I can do 1-2 = Low 3-5 = Moderate 6-7 = High
-
-8-10 = High 4-7 = Moderate 1-3 = Low
-
-2)  Find out what regressions I can do with my one (1) independent
-    variable and four (4) dependent variables
-
-3)  Prep data to be regressed
 
 4)  Make sure Interactions can be regresses as well
 
@@ -252,6 +205,9 @@ enough data.
 
 What should I do with the “weights” in my data?
 
+Look for an academic paper that finds out if people know the difference
+between anixety and stress
+
 # Coding
 
 ## Loading in Data
@@ -262,33 +218,10 @@ NFCS_2018_State_Data <- read_sav("NFCS 2018 State Data.sav")
 View(NFCS_2018_State_Data)
 ```
 
-## Recoding Variables
+## Preliminary Multicollinearity Check
 
 ``` r
 attach(NFCS_2018_State_Data)
-library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
-NFCS_2018_State_Data$EmergencyFund <- as.numeric(NFCS_2018_State_Data$J5) #Creating a new column for our dep. var.
-NFCS_2018_State_Data$EmergencyFund <- recode(NFCS_2018_State_Data$EmergencyFund, '1' = 1, '2' = 0) #so that a '0' = no emergency fund and '1' = yes emergency fund
-
-#NFCS_2018_State_Data$FinancialCondition <- as.factor(NFCS_2018_State_Data$J1) #Creating a new column 
-
-#samplemodel <- lm(J5 ~ J1 + J33_40 + J33_41 + G23, data = NFCS_2018_State_Data)
-#summary(samplemodel)
-#car::vif(samplemodel)
 cor(J1,J5)
 ```
 
@@ -350,5 +283,118 @@ cor(G23,J33_41)
 
 ``` r
 detach()
+```
+
+## Recoding Dep. & Ind. Variables
+
+``` r
+attach(NFCS_2018_State_Data)
+library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+#Dep. Var: Financial Condition
+NFCS_2018_State_Data$EmergencyFund <- as.factor(NFCS_2018_State_Data$J5) 
+levels(NFCS_2018_State_Data$EmergencyFund) <- c("1","0",NA, NA)
+
+#Ind. Var: Financial Condition
+NFCS_2018_State_Data$FinancialCondition <- as.factor(NFCS_2018_State_Data$J1) 
+levels(NFCS_2018_State_Data$FinancialCondition) <- c("1","2","3","4","5","6","7","8","9","10",NA, NA)
+NFCS_2018_State_Data$FinancialCondition <- as.numeric(NFCS_2018_State_Data$FinancialCondition) 
+High_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 8) & (NFCS_2018_State_Data$FinancialCondition <= 10))
+Moderate_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 4) & (NFCS_2018_State_Data$FinancialCondition <= 7))
+Low_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 1) & (NFCS_2018_State_Data$FinancialCondition <= 3))
+FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
+
+#Ind. Var: Anxiety
+NFCS_2018_State_Data$Anxiety <- as.factor(NFCS_2018_State_Data$J33_40)
+levels(NFCS_2018_State_Data$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
+NFCS_2018_State_Data$Anxiety <- as.numeric(NFCS_2018_State_Data$Anxiety)
+High_Anxiety <- ((NFCS_2018_State_Data$Anxiety>= 5) & (NFCS_2018_State_Data$Anxiety <= 7))
+Moderate_Anxiety <- ((NFCS_2018_State_Data$Anxiety > 3) & (NFCS_2018_State_Data$Anxiety < 5))
+Low_Anxiety <- ((NFCS_2018_State_Data$Anxiety>= 1) & (NFCS_2018_State_Data$Anxiety <= 3))
+AnxietyObj <- factor((1*High_Anxiety + 2*Moderate_Anxiety + 3*Low_Anxiety), levels = c(1, 2, 3), labels = c( "HighAnxiety", "ModAnxiety", "LowAnxiety"))
+
+#Ind. Var: Stress
+NFCS_2018_State_Data$Stress <- as.factor(NFCS_2018_State_Data$J33_41)
+levels(NFCS_2018_State_Data$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
+NFCS_2018_State_Data$Stress <- as.numeric(NFCS_2018_State_Data$Stress)
+High_Stress <- ((NFCS_2018_State_Data$Stress>= 5) & (NFCS_2018_State_Data$Stress <= 7))
+Moderate_Stress <- ((NFCS_2018_State_Data$Stress > 3) & (NFCS_2018_State_Data$Stress < 5))
+Low_Stress <- ((NFCS_2018_State_Data$Stress>= 1) & (NFCS_2018_State_Data$Stress <= 3))
+StressObj <- factor((1*High_Stress + 2*Moderate_Stress + 3*Low_Stress), levels = c(1, 2, 3), labels = c( "HighStress", "ModStress", "LowStress"))
+
+#Ind. Var: Amount of Debt
+NFCS_2018_State_Data$Debt <- as.factor(NFCS_2018_State_Data$G23)
+levels(NFCS_2018_State_Data$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
+NFCS_2018_State_Data$Debt <- as.numeric(NFCS_2018_State_Data$Debt)
+High_Debt <- ((NFCS_2018_State_Data$Debt>= 5) & (NFCS_2018_State_Data$Debt <= 7))
+Moderate_Debt <- ((NFCS_2018_State_Data$Debt > 3) & (NFCS_2018_State_Data$Debt < 5))
+Low_Debt <- ((NFCS_2018_State_Data$Debt>= 1) & (NFCS_2018_State_Data$Debt <= 3))
+DebtObj<- factor((1*High_Debt + 2*Moderate_Debt + 3*Low_Debt), levels = c(1, 2, 3), labels = c( "HighDebt", "ModDebt", "LowDebt"))
+
+detach()
 detach()
 ```
+
+## Subsetting data
+
+``` r
+attach(NFCS_2018_State_Data)
+use_varb <- ((EmergencyFund == 0) | (EmergencyFund == 1))
+data_use <- subset(NFCS_2018_State_Data, use_varb)
+detach()
+```
+
+## Simple Regressions
+
+``` r
+probitmodel <- glm(EmergencyFund ~ FinancialCondition + Anxiety + Stress + Debt, family = binomial (link = 'probit'), data = data_use)
+summary(probitmodel)
+```
+
+    ## 
+    ## Call:
+    ## glm(formula = EmergencyFund ~ FinancialCondition + Anxiety + 
+    ##     Stress + Debt, family = binomial(link = "probit"), data = data_use)
+    ## 
+    ## Deviance Residuals: 
+    ##     Min       1Q   Median       3Q      Max  
+    ## -2.4759  -0.7805  -0.3191   0.7798   2.4507  
+    ## 
+    ## Coefficients:
+    ##                     Estimate Std. Error z value Pr(>|z|)    
+    ## (Intercept)         0.453362   0.039535  11.467  < 2e-16 ***
+    ## FinancialCondition -0.230973   0.003811 -60.601  < 2e-16 ***
+    ## Anxiety             0.026840   0.007994   3.358 0.000786 ***
+    ## Stress              0.046038   0.007550   6.098 1.08e-09 ***
+    ## Debt                0.135095   0.004606  29.327  < 2e-16 ***
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## (Dispersion parameter for binomial family taken to be 1)
+    ## 
+    ##     Null deviance: 34684  on 25060  degrees of freedom
+    ## Residual deviance: 24655  on 25056  degrees of freedom
+    ##   (797 observations deleted due to missingness)
+    ## AIC: 24665
+    ## 
+    ## Number of Fisher Scoring iterations: 4
+
+``` r
+car::vif(probitmodel)
+```
+
+    ## FinancialCondition            Anxiety             Stress               Debt 
+    ##           1.142428           2.779534           2.685274           1.250408
