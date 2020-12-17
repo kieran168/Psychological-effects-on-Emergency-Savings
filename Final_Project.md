@@ -1,12 +1,40 @@
-Mental well-being’s effects on saving for an emergency fund
+Mental well-being and emergency savings
 ================
 Kieran Yuen
 
-# Steps
+# Steps for data
 
-1)  Do
+1)  Decide how to parse out the independent variables (answers range
+    from 1-7 and 1-10). So I can do 1-3 = Low 4-5 = Moderate 6-7 = High
 
-# Hypotheses
+1-3 = Low 4-7 = Moderate 8-10 = High
+
+2)  Find out what regressions I can do with my one (1) independent
+    variable and four (4) dependent variables
+
+3)  Prep data to be regressed
+
+4)  Make sure Interactions can be regresses as well
+
+5)  If interactions can be done, then prepare data to be able to be
+    regressed
+
+6)  
+# Outline of Paper
+
+Introduction - save this for last
+
+## Literature Review
+
+Economists have been studying how people make decisions since the
+beginning days of the social science.
+
+  - Here are some papers I am referencing as to why having an emergency
+    fund is important to have and talking about it’s benefits
+
+## Methods/Data
+
+### Hypothesis
 
 Someone with great financial knowledge should have the understanding and
 foresight to save for the future/emergency fund. *Make emergency fund
@@ -26,12 +54,7 @@ What type of people will have an emergency fund?
 What kind of effect does mental well-being have in determining if
 someone has an emergency fund?
 
-How does how you feel about your finances affect whether you have an
-emergency fund or not?
-
-# Introduction
-
-## Dataset used
+### Dataset used
 
 The dataset I used is the National Financial Capability Study (NFCS)
 which was funded by the FINRA Investor Education Foundation and
@@ -48,11 +71,87 @@ looking for to address my hypothesis.
 This research will be focusing on one financial decision made by
 households, and that is the decision to save an emergency fund or not.
 
-## Overall goal
+How does how you feel about your finances affect whether you have an
+emergency fund or not? - Here is my hypothesis and why I chose this
+hypothesis - Here is the data I am going to look at to answer the
+question about that hypothesis - Here is how I am going to
+restrict/SUBSET the data to test my hypothesis - explain why we are
+excluding the Don’t Know/Prefer not to answer - Here is how I am going
+to test the data to test my hypothesis - Here is how i prepared the data
+- Here are some summary statistics of my SUBSETTED data broken out by
+Age, Education Level, Labor Force Participation, income level, race,
+maritical status, dependent children - Here is a table of all my
+important variables in my regression with mean, standard deviation,
+min/max, median, average rating - Here is how I verified that all the
+important variables I will be using in my research makes sense (just
+talk about how the average rating you saw for one of the questions
+should be low because people who have a lot of debt would feel anxious
+about their finances - this is a correlation)
+
+### Means (simple graphs, correlations, differences of means)
+
+### Simple Regressions
+
+Do logistic regression on
+
+### Complicated Regressions
+
+## Results
+
+  - Here is a scatterplot of my dep. variable and one of the ind.
+    variables (lets do one for each ind. var. so that we can see what
+    each one looks like)
+  - Determine if squared or cubic or logarithmic terms would be useful
+    by looking at the scatterplot of my regression
+  - Determine if I want to look at certain subgroups within my data -
+    maybe looking specifically on an income group might tell me
+    something intersting about my data
+  - Here is where I present some of my regression models (logit, probit)
+    in easy-to-read tables (look at papers you have read as an example)
+    -Here is where I present my main conclusion from what the regression
+    has told me and where i try to do some “robustness checks” of the
+    data (for example, I could look at the results by education level
+    here and see )
+
+## Discussion
+
+  - What are the real world policy implications of my results?
+  - Is there existing policies that already are doing what my research
+    shows they should be doing?
+  - DO NOT SAY “DO THIS” “DON’T DO THIS”
+  - Instead, rely on economic facts and analysis
+  - Present the facts and allow the reader to make the policy decison
+    for themselves
+  - I can say “if we can educate people more on personal financial
+    issues this would increase the liklihood of them having a savings
+    account by XX%” *Add a statement about how this fits into the larger
+    picture of financial literacy*
+
+## Limitations
+
+  - We do not know where people are holding their 3 months of emergency
+    funds. Whether that is in their savings account or invested in the
+    stock market.
+  - It is understood that measuring a person’s financial well-being is
+    not like measuring their finances to determine if they can afford a
+    mortgage, there is subjectivity on both the researcher side and the
+    survey-taker side.
+  - The simplicity of the functional form of the research limits it’s
+    purview *How this study can continue to be studied/what I can
+    further study* *Understand that we cannot know everything, there are
+    limitations to what we can know and what we can even find out*
+
+## Conclusion
+
+  - save this for last
+
+# Overall goal
 
 To find possible reasons why someone might not have an emergency fund
 and propose ideas on how to address those issues to encourage/incentive
 people to have an emergency fund.
+
+# Variables
 
 ## Dependent variable
 
@@ -87,7 +186,7 @@ right now* 7 = Strongly agree 1 = Strongly disagree
 
 Objective financial knowledge:anxiety/stressed about personal finances
 
-Someone who objectively understands finances (but not necissarily
+Someone who objectively understands finances (but not necessarily
 confident) but is stressed or gets anixety from thinking about.
 
 How likely are they to have an emergency fund?
@@ -97,7 +196,7 @@ How likely are they to have an emergency fund?
 Subjective financial knowledge:anxiety/stressed about personal finances
 
 Someone who is confident in their knowledge about personal finance (but
-not necissarily objectively knowledgeable about it) but is stressed/not
+not necessarily objectively knowledgeable about it) but is stressed/not
 stressed or gets anixety from thinking about.
 
 How likely are they to have an emergency fund?
@@ -108,6 +207,10 @@ Is “feeling confident” the same as “not feeling anxious” or “feeling
 great about my personal finance situation?”
 
 # Literature Review
+
+Financial behavior has been a topic of interest given how
+
+Point out
 
 ## Article \#1
 
@@ -136,7 +239,7 @@ variables. Used ordinal regression to analyze students’ grades.
 
 ### What question is addressed?
 
-This articles primary question is: What are the characteristics of
+This article’s primary question is: What are the characteristics of
 traditional undergraduate students that take the university personal
 finance class?
 
@@ -162,7 +265,7 @@ Experience, Financial Knowledge, and Credit Card Attitudes”,
 The data they used were from the College Student Financial Literacy
 Surveys (CSFLS), which measures the financial knowledge, attitudes,
 behavior, influences, and personal demographics that may affect the
-fianncial literacy of college students.
+financial literacy of college students.
 
 ### Econometric Techniques
 
@@ -241,21 +344,21 @@ the long- and short-term financial behaviors, among various age groups
 ### Findings
 
 The study found that both objective and subjective financial literacy
-were positively associated with long- and short-term financial
-behaviors.
+were positively associated with long and short-term financial behaviors.
 
 In the younger age groups subjective financial knowledge had a stronger
 correlation than either objective financial knowledge or subjective
-financial management ability. This means that confidence in one’s
-financial literacy mattered more when it came to making the right
+financial management ability. This means that CONFIDENCE in one’s
+financial literacy MATTERED MORE when it came to making the right
 financial decisions than actual objective knowledge of the financial
-topic.
+topic for the younger age group.
 
 In the older age groups, objective financial knowledge was more strongly
 related to long-term financial behavior than either of the other two
-measures of financial literacy.This means the older age groups,
-objective financial knowledge translated to financial smarter decisions
-with their money than simply confidence in one’s own self.
+measures of financial literacy.This means for the older age groups,
+objective financial knowledge translated to (what the survey deteremined
+to be) financially smart short and long-term decisions with their money
+than simply confidence in one’s own self.
 
 ## Article \#5
 
@@ -359,46 +462,18 @@ Regulation Authority (FINRA)
 
 ### What question is addressed?
 
-Why Do Households Lack Emergency Savings? The Role of Financial
-Capability
+This paper investigates the correlations between subjectively and
+objectively assessed measures of financial knowledge, and the
+probability of having savings adequate to cover 3 months of typical
+expenses.
 
 ### Findings
 
-Subjective financial knowledge, financial confidence, and savings
-account ownership, but not objective financial knowledge, were
-significant and consistent predictors of having an emergency fund.
-Savings account ownership was the strongest predictor, accounting for an
-increase in the probability of having an emergency fund of 25% to 29%
-across study years. Adding homeownership and ability to cover expenses
-to the models increased the proportion of variance explained by an
-average of 29%.
-
-# Means (simple graphs, correlations, differences of means)
-
-# Simple Regressions
-
-Do logistic regression on
-
-# Complicated Regressions
-
-# Conclusion (Explain Results)
-
-*Add a statment about how this fits into the larger picture of financial
-literacy* *How this study can continue to be studied/what I can further
-study* *Understand that we cannot know everything, there are limitations
-to what we can know and what we can even find out*
-
-# Limitations
-
-We do not know where people are holding their 3 months of emergency
-funds. Whether that is in their savings account or invested in the stock
-market.
-
-# Questions for Professor Foster
-
-What is confirmatory factor analysis? is this the same where Lasso tells
-us which variables are most important? Per Kevin, it is the same as the
-variable importance selection tools we have used as in class.
+Results indicate that households who are more financially knowledgeable
+or more confident in their financial ability are significantly more
+likely to report having emergency funds. These findings support the
+growing literature on the relationship between financial knowledge and
+economic behaviors and have wide policy implications.
 
 Per Kevin, when I run the objective and subjective financial knowledge
 questions I should be able to see the same results as what I saw in
