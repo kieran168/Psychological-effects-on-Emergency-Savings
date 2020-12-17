@@ -110,7 +110,7 @@ Do logistic regression on
     by looking at the scatterplot of my regression
   - Determine if I want to look at certain subgroups within my data -
     maybe looking specifically on an income group might tell me
-    something intersting about my data
+    something interesting about my data
   - Here is where I present some of my regression models (logit, probit)
     in easy-to-read tables (look at papers you have read as an example)
     -Here is where I present my main conclusion from what the regression
@@ -285,7 +285,7 @@ cor(G23,J33_41)
 detach()
 ```
 
-## Recoding Dep. & Ind. Variables
+## Create new columns of data
 
 ``` r
 attach(NFCS_2018_State_Data)
@@ -311,38 +311,22 @@ levels(NFCS_2018_State_Data$EmergencyFund) <- c("1","0",NA, NA)
 #Ind. Var: Financial Condition
 NFCS_2018_State_Data$FinancialCondition <- as.factor(NFCS_2018_State_Data$J1) 
 levels(NFCS_2018_State_Data$FinancialCondition) <- c("1","2","3","4","5","6","7","8","9","10",NA, NA)
-NFCS_2018_State_Data$FinancialCondition <- as.numeric(NFCS_2018_State_Data$FinancialCondition) 
-High_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 8) & (NFCS_2018_State_Data$FinancialCondition <= 10))
-Moderate_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 4) & (NFCS_2018_State_Data$FinancialCondition <= 7))
-Low_Finances <- ((NFCS_2018_State_Data$FinancialCondition>= 1) & (NFCS_2018_State_Data$FinancialCondition <= 3))
-FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
 
 #Ind. Var: Anxiety
 NFCS_2018_State_Data$Anxiety <- as.factor(NFCS_2018_State_Data$J33_40)
 levels(NFCS_2018_State_Data$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
-NFCS_2018_State_Data$Anxiety <- as.numeric(NFCS_2018_State_Data$Anxiety)
-High_Anxiety <- ((NFCS_2018_State_Data$Anxiety>= 5) & (NFCS_2018_State_Data$Anxiety <= 7))
-Moderate_Anxiety <- ((NFCS_2018_State_Data$Anxiety > 3) & (NFCS_2018_State_Data$Anxiety < 5))
-Low_Anxiety <- ((NFCS_2018_State_Data$Anxiety>= 1) & (NFCS_2018_State_Data$Anxiety <= 3))
-AnxietyObj <- factor((1*High_Anxiety + 2*Moderate_Anxiety + 3*Low_Anxiety), levels = c(1, 2, 3), labels = c( "HighAnxiety", "ModAnxiety", "LowAnxiety"))
 
 #Ind. Var: Stress
 NFCS_2018_State_Data$Stress <- as.factor(NFCS_2018_State_Data$J33_41)
 levels(NFCS_2018_State_Data$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
-NFCS_2018_State_Data$Stress <- as.numeric(NFCS_2018_State_Data$Stress)
-High_Stress <- ((NFCS_2018_State_Data$Stress>= 5) & (NFCS_2018_State_Data$Stress <= 7))
-Moderate_Stress <- ((NFCS_2018_State_Data$Stress > 3) & (NFCS_2018_State_Data$Stress < 5))
-Low_Stress <- ((NFCS_2018_State_Data$Stress>= 1) & (NFCS_2018_State_Data$Stress <= 3))
-StressObj <- factor((1*High_Stress + 2*Moderate_Stress + 3*Low_Stress), levels = c(1, 2, 3), labels = c( "HighStress", "ModStress", "LowStress"))
 
 #Ind. Var: Amount of Debt
 NFCS_2018_State_Data$Debt <- as.factor(NFCS_2018_State_Data$G23)
 levels(NFCS_2018_State_Data$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
-NFCS_2018_State_Data$Debt <- as.numeric(NFCS_2018_State_Data$Debt)
-High_Debt <- ((NFCS_2018_State_Data$Debt>= 5) & (NFCS_2018_State_Data$Debt <= 7))
-Moderate_Debt <- ((NFCS_2018_State_Data$Debt > 3) & (NFCS_2018_State_Data$Debt < 5))
-Low_Debt <- ((NFCS_2018_State_Data$Debt>= 1) & (NFCS_2018_State_Data$Debt <= 3))
-DebtObj<- factor((1*High_Debt + 2*Moderate_Debt + 3*Low_Debt), levels = c(1, 2, 3), labels = c( "HighDebt", "ModDebt", "LowDebt"))
+
+#Ind. Var: Subjective Financial Knowledge (Confidence)
+NFCS_2018_State_Data$Confidence <- as.factor(NFCS_2018_State_Data$M4)
+levels(NFCS_2018_State_Data$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
 
 detach()
 detach()
@@ -352,49 +336,281 @@ detach()
 
 ``` r
 attach(NFCS_2018_State_Data)
-use_varb <- ((EmergencyFund == 0) | (EmergencyFund == 1))
+use_varb <- ((EmergencyFund == 1) | (EmergencyFund == 0))
 data_use <- subset(NFCS_2018_State_Data, use_varb)
+detach()
+```
+
+## Recoding Ind. Variables in Subsetted Database
+
+``` r
+attach(data_use)
+library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+#Ind. Var: Financial Condition
+data_use$FinancialCondition <- as.numeric(data_use$FinancialCondition) 
+High_Finances <- ((data_use$FinancialCondition>= 8) & (data_use$FinancialCondition <= 10))
+Moderate_Finances <- ((data_use$FinancialCondition>= 4) & (data_use$FinancialCondition <= 7))
+Low_Finances <- ((data_use$FinancialCondition>= 1) & (data_use$FinancialCondition <= 3))
+FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
+
+#Ind. Var: Anxiety
+data_use$Anxiety <- as.factor(data_use$J33_40)
+levels(data_use$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
+data_use$Anxiety <- as.numeric(data_use$Anxiety)
+High_Anxiety <- ((data_use$Anxiety>= 5) & (data_use$Anxiety <= 7))
+Moderate_Anxiety <- ((data_use$Anxiety > 3) & (data_use$Anxiety < 5))
+Low_Anxiety <- ((data_use$Anxiety>= 1) & (data_use$Anxiety <= 3))
+AnxietyObj <- factor((1*High_Anxiety + 2*Moderate_Anxiety + 3*Low_Anxiety), levels = c(1, 2, 3), labels = c( "HighAnxiety", "ModAnxiety", "LowAnxiety"))
+
+#Ind. Var: Stress
+data_use$Stress <- as.factor(data_use$J33_41)
+levels(data_use$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
+data_use$Stress <- as.numeric(data_use$Stress)
+High_Stress <- ((data_use$Stress>= 5) & (data_use$Stress <= 7))
+Moderate_Stress <- ((data_use$Stress > 3) & (data_use$Stress < 5))
+Low_Stress <- ((data_use$Stress>= 1) & (data_use$Stress <= 3))
+StressObj <- factor((1*High_Stress + 2*Moderate_Stress + 3*Low_Stress), levels = c(1, 2, 3), labels = c( "HighStress", "ModStress", "LowStress"))
+
+#Ind. Var: Amount of Debt
+data_use$Debt <- as.factor(data_use$G23)
+levels(data_use$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
+data_use$Debt <- as.numeric(data_use$Debt)
+High_Debt <- ((data_use$Debt>= 5) & (data_use$Debt <= 7))
+Moderate_Debt <- ((data_use$Debt > 3) & (data_use$Debt < 5))
+Low_Debt <- ((data_use$Debt>= 1) & (data_use$Debt <= 3))
+DebtObj<- factor((1*High_Debt + 2*Moderate_Debt + 3*Low_Debt), levels = c(1, 2, 3), labels = c( "HighDebt", "ModDebt", "LowDebt"))
+
+#Ind. Var: Subjective Financial Knowledge (Confidence)
+data_use$Confidence <- as.factor(data_use$M4)
+levels(data_use$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
+data_use$Confidence <- as.numeric(data_use$Confidence)
+High_Confidence <- ((data_use$Confidence>= 5) & (data_use$Confidence <= 7))
+Moderate_Confidence <- ((data_use$Confidence > 3) & (data_use$Confidence < 5))
+Low_Confidence <- ((data_use$Confidence>= 1) & (data_use$Confidence <= 3))
+ConfidenceObj<- factor((1*High_Confidence + 2*Moderate_Confidence + 3*Low_Confidence), levels = c(1, 2, 3), labels = c( "HighConfidence", "ModConfidence", "LowConfidence"))
+
+
+detach()
 detach()
 ```
 
 ## Simple Regressions
 
 ``` r
-probitmodel <- glm(EmergencyFund ~ FinancialCondition + Anxiety + Stress + Debt, family = binomial (link = 'probit'), data = data_use)
-summary(probitmodel)
+logitmodel <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + DebtObj, family = binomial, data = data_use)
+summary(logitmodel)
 ```
 
     ## 
     ## Call:
-    ## glm(formula = EmergencyFund ~ FinancialCondition + Anxiety + 
-    ##     Stress + Debt, family = binomial(link = "probit"), data = data_use)
+    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + 
+    ##     DebtObj, family = binomial, data = data_use)
     ## 
     ## Deviance Residuals: 
     ##     Min       1Q   Median       3Q      Max  
-    ## -2.4759  -0.7805  -0.3191   0.7798   2.4507  
+    ## -2.1628  -0.8041  -0.4294   0.8821   2.2044  
     ## 
     ## Coefficients:
-    ##                     Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)         0.453362   0.039535  11.467  < 2e-16 ***
-    ## FinancialCondition -0.230973   0.003811 -60.601  < 2e-16 ***
-    ## Anxiety             0.026840   0.007994   3.358 0.000786 ***
-    ## Stress              0.046038   0.007550   6.098 1.08e-09 ***
-    ## Debt                0.135095   0.004606  29.327  < 2e-16 ***
+    ##                       Estimate Std. Error z value Pr(>|z|)    
+    ## (Intercept)           -0.52510    0.04103 -12.799  < 2e-16 ***
+    ## FinancesObjModFinCond  1.26848    0.03807  33.321  < 2e-16 ***
+    ## FinancesObjLowFinCond  2.76246    0.04914  56.211  < 2e-16 ***
+    ## AnxietyObjModAnxiety  -0.02821    0.04865  -0.580    0.562    
+    ## AnxietyObjLowAnxiety  -0.24956    0.05284  -4.723 2.33e-06 ***
+    ## StressObjModStress    -0.18855    0.04733  -3.983 6.79e-05 ***
+    ## StressObjLowStress    -0.46846    0.04955  -9.454  < 2e-16 ***
+    ## DebtObjModDebt        -0.30137    0.04587  -6.570 5.02e-11 ***
+    ## DebtObjLowDebt        -1.09440    0.03633 -30.120  < 2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
     ##     Null deviance: 34684  on 25060  degrees of freedom
-    ## Residual deviance: 24655  on 25056  degrees of freedom
+    ## Residual deviance: 25340  on 25052  degrees of freedom
     ##   (797 observations deleted due to missingness)
-    ## AIC: 24665
+    ## AIC: 25358
     ## 
     ## Number of Fisher Scoring iterations: 4
 
 ``` r
-car::vif(probitmodel)
+car::vif(logitmodel)
 ```
 
-    ## FinancialCondition            Anxiety             Stress               Debt 
-    ##           1.142428           2.779534           2.685274           1.250408
+    ##                 GVIF Df GVIF^(1/(2*Df))
+    ## FinancesObj 1.087506  2        1.021193
+    ## AnxietyObj  2.502737  2        1.257777
+    ## StressObj   2.435859  2        1.249289
+    ## DebtObj     1.178690  2        1.041957
+
+``` r
+exp(coefficients(logitmodel))
+```
+
+    ##           (Intercept) FinancesObjModFinCond FinancesObjLowFinCond 
+    ##             0.5914949             3.5554290            15.8387430 
+    ##  AnxietyObjModAnxiety  AnxietyObjLowAnxiety    StressObjModStress 
+    ##             0.9721854             0.7791446             0.8281583 
+    ##    StressObjLowStress        DebtObjModDebt        DebtObjLowDebt 
+    ##             0.6259684             0.7398070             0.3347391
+
+``` r
+testmodel <- glm(EmergencyFund ~ ConfidenceObj, family = binomial, data = data_use)
+summary(testmodel)
+```
+
+    ## 
+    ## Call:
+    ## glm(formula = EmergencyFund ~ ConfidenceObj, family = binomial, 
+    ##     data = data_use)
+    ## 
+    ## Deviance Residuals: 
+    ##     Min       1Q   Median       3Q      Max  
+    ## -1.8085  -0.9979  -0.9979   1.3682   1.3682  
+    ## 
+    ## Coefficients:
+    ##                            Estimate Std. Error z value Pr(>|z|)    
+    ## (Intercept)                -0.43799    0.01496  -29.28   <2e-16 ***
+    ## ConfidenceObjModConfidence  1.11364    0.03625   30.72   <2e-16 ***
+    ## ConfidenceObjLowConfidence  1.85652    0.05223   35.55   <2e-16 ***
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## (Dispersion parameter for binomial family taken to be 1)
+    ## 
+    ##     Null deviance: 35147  on 25390  degrees of freedom
+    ## Residual deviance: 32861  on 25388  degrees of freedom
+    ##   (467 observations deleted due to missingness)
+    ## AIC: 32867
+    ## 
+    ## Number of Fisher Scoring iterations: 4
+
+``` r
+exp(coefficients(testmodel))
+```
+
+    ##                (Intercept) ConfidenceObjModConfidence 
+    ##                   0.645334                   3.045427 
+    ## ConfidenceObjLowConfidence 
+    ##                   6.401411
+
+``` r
+logitmodel2 <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + DebtObj + ConfidenceObj + StressObj:ConfidenceObj, family = binomial, data = data_use)
+summary(logitmodel2)
+```
+
+    ## 
+    ## Call:
+    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + 
+    ##     DebtObj + ConfidenceObj + StressObj:ConfidenceObj, family = binomial, 
+    ##     data = data_use)
+    ## 
+    ## Deviance Residuals: 
+    ##     Min       1Q   Median       3Q      Max  
+    ## -2.3904  -0.7883  -0.4166   0.8195   2.2305  
+    ## 
+    ## Coefficients:
+    ##                                               Estimate Std. Error z value
+    ## (Intercept)                                   -0.59002    0.04271 -13.814
+    ## FinancesObjModFinCond                          1.19020    0.03896  30.553
+    ## FinancesObjLowFinCond                          2.52906    0.05118  49.420
+    ## AnxietyObjModAnxiety                          -0.02815    0.04936  -0.570
+    ## AnxietyObjLowAnxiety                          -0.22918    0.05383  -4.257
+    ## StressObjModStress                            -0.20472    0.05393  -3.796
+    ## StressObjLowStress                            -0.44990    0.05459  -8.242
+    ## DebtObjModDebt                                -0.35034    0.04666  -7.509
+    ## DebtObjLowDebt                                -1.13167    0.03697 -30.611
+    ## ConfidenceObjModConfidence                     0.47462    0.06116   7.761
+    ## ConfidenceObjLowConfidence                     0.85893    0.08233  10.432
+    ## StressObjModStress:ConfidenceObjModConfidence  0.04856    0.10563   0.460
+    ## StressObjLowStress:ConfidenceObjModConfidence  0.09191    0.10278   0.894
+    ## StressObjModStress:ConfidenceObjLowConfidence  0.14380    0.16044   0.896
+    ## StressObjLowStress:ConfidenceObjLowConfidence  0.19007    0.14995   1.268
+    ##                                               Pr(>|z|)    
+    ## (Intercept)                                    < 2e-16 ***
+    ## FinancesObjModFinCond                          < 2e-16 ***
+    ## FinancesObjLowFinCond                          < 2e-16 ***
+    ## AnxietyObjModAnxiety                          0.568491    
+    ## AnxietyObjLowAnxiety                          2.07e-05 ***
+    ## StressObjModStress                            0.000147 ***
+    ## StressObjLowStress                             < 2e-16 ***
+    ## DebtObjModDebt                                5.97e-14 ***
+    ## DebtObjLowDebt                                 < 2e-16 ***
+    ## ConfidenceObjModConfidence                    8.44e-15 ***
+    ## ConfidenceObjLowConfidence                     < 2e-16 ***
+    ## StressObjModStress:ConfidenceObjModConfidence 0.645709    
+    ## StressObjLowStress:ConfidenceObjModConfidence 0.371202    
+    ## StressObjModStress:ConfidenceObjLowConfidence 0.370093    
+    ## StressObjLowStress:ConfidenceObjLowConfidence 0.204971    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## (Dispersion parameter for binomial family taken to be 1)
+    ## 
+    ##     Null deviance: 34215  on 24730  degrees of freedom
+    ## Residual deviance: 24648  on 24716  degrees of freedom
+    ##   (1127 observations deleted due to missingness)
+    ## AIC: 24678
+    ## 
+    ## Number of Fisher Scoring iterations: 4
+
+``` r
+car::vif(logitmodel2)
+```
+
+    ##                             GVIF Df GVIF^(1/(2*Df))
+    ## FinancesObj             1.152573  2        1.036137
+    ## AnxietyObj              2.498931  2        1.257299
+    ## StressObj               3.649645  2        1.382174
+    ## DebtObj                 1.186866  2        1.043759
+    ## ConfidenceObj           3.747015  2        1.391302
+    ## StressObj:ConfidenceObj 5.245624  4        1.230197
+
+``` r
+exp(coefficients(logitmodel2))
+```
+
+    ##                                   (Intercept) 
+    ##                                     0.5543182 
+    ##                         FinancesObjModFinCond 
+    ##                                     3.2877490 
+    ##                         FinancesObjLowFinCond 
+    ##                                    12.5416767 
+    ##                          AnxietyObjModAnxiety 
+    ##                                     0.9722454 
+    ##                          AnxietyObjLowAnxiety 
+    ##                                     0.7951860 
+    ##                            StressObjModStress 
+    ##                                     0.8148771 
+    ##                            StressObjLowStress 
+    ##                                     0.6376949 
+    ##                                DebtObjModDebt 
+    ##                                     0.7044510 
+    ##                                DebtObjLowDebt 
+    ##                                     0.3224931 
+    ##                    ConfidenceObjModConfidence 
+    ##                                     1.6074078 
+    ##                    ConfidenceObjLowConfidence 
+    ##                                     2.3606259 
+    ## StressObjModStress:ConfidenceObjModConfidence 
+    ##                                     1.0497605 
+    ## StressObjLowStress:ConfidenceObjModConfidence 
+    ##                                     1.0962678 
+    ## StressObjModStress:ConfidenceObjLowConfidence 
+    ##                                     1.1546512 
+    ## StressObjLowStress:ConfidenceObjLowConfidence 
+    ##                                     1.2093283
