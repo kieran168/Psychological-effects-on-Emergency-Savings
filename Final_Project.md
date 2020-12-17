@@ -2,27 +2,11 @@ Mental well-being and emergency savings
 ================
 Kieran Yuen
 
-# Steps for data
-
-1)  Decide how to parse out the independent variables (answers range
-    from 1-7 and 1-10). So I can do 1-3 = Low 4-5 = Moderate 6-7 = High
-
-1-3 = Low 4-7 = Moderate 8-10 = High
-
-2)  Find out what regressions I can do with my one (1) independent
-    variable and four (4) dependent variables
-
-3)  Prep data to be regressed
-
-4)  Make sure Interactions can be regresses as well
-
-5)  If interactions can be done, then prepare data to be able to be
-    regressed
-
-6)  
 # Outline of Paper
 
-Introduction - save this for last
+## Introduction
+
+  - save this for last
 
 ## Literature Review
 
@@ -59,7 +43,7 @@ someone has an emergency fund?
 The dataset I used is the National Financial Capability Study (NFCS)
 which was funded by the FINRA Investor Education Foundation and
 conducted by ARC Research. The data can be downloaded here:
-<https://www.usfinancialcapability.org/downloads.php>. Thgis study has
+<https://www.usfinancialcapability.org/downloads.php>. This study has
 been conducted in 2009, 2012, 2015, and 2018. I will be using the 2018
 dataset. The overall goal of this study is to assess financial
 capability on certain key metrics and evaluate how these vary with
@@ -70,6 +54,27 @@ looking for to address my hypothesis.
 
 This research will be focusing on one financial decision made by
 households, and that is the decision to save an emergency fund or not.
+
+#### Dependent Variable
+
+The dependent variable will be question \#J5: *Have you set aside
+emergency or rainy day funds that would cover your expenses for 3
+months, in case of sickness, job loss, economic downturn, or other
+emergencies?* The available answers were: “Yes,” “No,” “Don’t know,” and
+“Prefer not to say.” A binary variable was created where “1” corresponds
+to “Yes” and “0” means “No” this individual did not have an emergency
+fund. Responses where the answers were “Don’t know” or “Prefer not to
+say” were not included in the analysis.
+
+#### Independent Variables
+
+*The four key independent variables had (INSERT ANSWER HERE)
+correlations with one anohter, indicating that the four varialbes were
+not likely measuring the same thing. The correlation coefficient was
+X.XX. This means that they both had low correlation but both affected
+the likelihood of someone having an emergnecy fund or not - ALSO
+CONSIDER RUNNING THE VARIANCE INFLATION FACTOR (VIF) TEST TO CHECK FOR
+MULTICOLLINEARITY BETWEEN THE IND. VARIABLES*
 
 How does how you feel about your finances affect whether you have an
 emergency fund or not? - Here is my hypothesis and why I chose this
@@ -166,19 +171,27 @@ exclude don’t know and prefer not to answer
 debts and savings, how satisfied are you with your current personal
 financial condition?* 10 = Extremely Satisfied 1 = Not at all Satisfied
 
+8-10 = High\_Finances 4-7 = Moderate\_Finances 1-3 = Low\_Finances
+
 (J33\_40) Anxiety about my personal finances (rate 1-7) *How strongly do
 you agree or disagree with the following statements? - Thinking about my
 personal finances can make me feel anxious* 7 = Strongly agree 1 =
 Strongly disagree
+
+6-7 = High\_Anxiety 3-5 = Moderate\_Anxiety 1-2 = Low\_Anxiety
 
 (J33\_41) Personal finances make me feel stressed (rate 1-7) *How
 strongly do you agree or disagree with the following statements? -
 Discussing my finances can make my heart race or make me feel stressed*
 7 = Strongly agree 1 = Strongly disagree
 
+6-7 = High\_Stress 3-5 = Moderate\_Stress 1-2 = Low\_Stress
+
 (G23) Too much debt right now in my life (rate 1-7) *How strongly do you
 agree or disagree with the following statement? - I have too much debt
 right now* 7 = Strongly agree 1 = Strongly disagree
+
+6-7 = High\_Debt 3-5 = Moderate\_Debt 1-2 = Low\_Debt
 
 ## Other variables to interact with ind. var.
 
@@ -201,279 +214,28 @@ stressed or gets anixety from thinking about.
 
 How likely are they to have an emergency fund?
 
-# Questions to consider
+# Steps for data
+
+1)  Decide how to parse out the independent variables (answers range
+    from 1-7 and 1-10). So I can do 1-2 = Low 3-5 = Moderate 6-7 = High
+
+8-10 = High 4-7 = Moderate 1-3 = Low
+
+2)  Find out what regressions I can do with my one (1) independent
+    variable and four (4) dependent variables
+
+3)  Prep data to be regressed
+
+4)  Make sure Interactions can be regresses as well
+
+5)  If interactions can be done, then prepare data to be able to be
+    regressed
+
+6)  
+# Things to consider
 
 Is “feeling confident” the same as “not feeling anxious” or “feeling
 great about my personal finance situation?”
-
-# Literature Review
-
-Financial behavior has been a topic of interest given how
-
-Point out
-
-## Article \#1
-
-Jaclyn J. Beierlein, Margot Neverett, (2013). “Who takes personal
-finance?”,
-<http://ccny-proxy1.libr.ccny.cuny.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=94644713&site=ehost-live>
-
-This article has certainly peaked my interests because I always believed
-that if people took a course in personal finance that they would make
-much smarter decisions with their money.
-
-### Data
-
-Institutional data from admission applications and transcripts of 17,499
-students at East Carolina University. I believe this type of data should
-be accessible by asking for it from a college or university if they can
-provide it to me anonymized.
-
-### Econometric Techniques
-
-They made dummy variables (0/1) of all the variables they have and ran a
-t-test to determine the difference between the group who took the
-personal finance course and those who did not. They also performed a
-logistic regression to account for spurious relationships amongst the
-variables. Used ordinal regression to analyze students’ grades.
-
-### What question is addressed?
-
-This article’s primary question is: What are the characteristics of
-traditional undergraduate students that take the university personal
-finance class?
-
-### Findings
-
-Assuming that enrollment in a personal finance course is considered
-showing as a measure of interest, women demonstrate less interest in
-personal finance than do men. Those with highest interest in a pesonal
-finance course are: men, business, human ecology an social science
-majors. Those students who are less likely to take a personal finance
-course are: women, students with higher verbal SAT scores and GPAs, and
-arts and education majors.
-
-## Article \#2
-
-Hancock, Adam M.; Jorgensen, Bryce L.; Swanson, Melvin S., (2013).
-“College Students and Credit Card Use: The Role of Parents, Work
-Experience, Financial Knowledge, and Credit Card Attitudes”,
-<http://ccny-proxy1.libr.ccny.cuny.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=ecn&AN=1412539&site=ehost-live>
-
-### Data
-
-The data they used were from the College Student Financial Literacy
-Surveys (CSFLS), which measures the financial knowledge, attitudes,
-behavior, influences, and personal demographics that may affect the
-financial literacy of college students.
-
-### Econometric Techniques
-
-Logistical regression to predict likelihood of having two or more credit
-cards. Logistical regression predicting likelihood of having more than
-$500 in credit card debt
-
-### What question is addressed?
-
-This study is trying to examine how students’ credit card behaviors
-(i.e. number of credit cards and amount of debt) is influenced by:
-parental interactions, years of work experience, financial knowledge,
-credit card attitudes, and personal characteristics.
-
-## Article \#3
-
-Henager, R., Cude, B.J. Financial Literacy of High School Graduates:
-Long- and Short-Term Financial Behavior by Age Group. J Fam Econ Iss 40,
-564–575 (2019). <https://doi.org/10.1007/s10834-019-09626-2>
-
-### Data
-
-2015 National Financial Capability Study (NFCS) State-by-State Survey
-Instrument sponsored by the Financial Industry Regulation Authority
-(FINRA)
-
-### Econometric Techniques
-
-Ordered logistic regressions were run to analyze the key dependent
-variables (when the dependent variable was an index of behaviors; either
-0-3 or 0-4).
-
-Logistic Regression was used for when the dependent variable was the
-short-term variable budgeting.
-
-### What question is addressed?
-
-Examine the influence of financial literacy and financial education on
-the long- and short-term financial behaviors, by age group for those
-without a college degree.
-
-### Findings
-
-The study found that confidence in both financial knowledge and
-financial ability are important influences on positive financial
-behaviors for those without a college degree.
-
-## Article \#4
-
-Henager, Robin and Cude, Brenda J. Financial Literacy and Long- and
-Short-Term Financial Behavior in Different Age Groups. Journal of
-Financial Counseling and Planning Vol 27, 3-19 (2016).
-<https://connect.springerpub.com/content/sgrjfcp/27/1/3>
-
-### Data
-
-2012 National Financial Capability Study (NFCS) State-by-State Survey
-Instrument sponsored by the Financial Industry Regulation Authority
-(FINRA)
-
-### Econometric Techniques
-
-Ordered logistic regressions were run to analyze the key dependent
-variables (when the dependent variable was an index of behaviors; either
-0-3 or 0-4). The Variance Inflation Factor (VIF) test was run to check
-for multicollinearity between the independent variables used in this
-study. The VIF test indicated no multicollinearity. Dependent variables
-were both long-term and short-term financial behaviors.
-
-### What question is addressed?
-
-Examine the influence of financial literacy and financial education on
-the long- and short-term financial behaviors, among various age groups
-(18-24, 25-34, 35-44, 45-54, 55-64, 65+).
-
-### Findings
-
-The study found that both objective and subjective financial literacy
-were positively associated with long and short-term financial behaviors.
-
-In the younger age groups subjective financial knowledge had a stronger
-correlation than either objective financial knowledge or subjective
-financial management ability. This means that CONFIDENCE in one’s
-financial literacy MATTERED MORE when it came to making the right
-financial decisions than actual objective knowledge of the financial
-topic for the younger age group.
-
-In the older age groups, objective financial knowledge was more strongly
-related to long-term financial behavior than either of the other two
-measures of financial literacy.This means for the older age groups,
-objective financial knowledge translated to (what the survey deteremined
-to be) financially smart short and long-term decisions with their money
-than simply confidence in one’s own self.
-
-## Article \#5
-
-Birkenmaier J, Fu Q. The Association of Alternative Financial Services
-Usage and Financial Access: Evidence from the National Financial
-Capability Study. Journal of Family and Economic Issues.
-2016;37(3):450-460. Accessed December 6, 2020.
-<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1590468&site=ehost-live>
-
-### Data
-
-2012 National Financial Capability Study (NFCS) State-by-State Survey
-Instrument sponsored by the Financial Industry Regulation Authority
-(FINRA)
-
-### Econometric Techniques
-
-OLS
-
-### What question is addressed?
-
-Association of financial access and alternative financial services
-
-### Findings
-
-Results suggested that being unbanked was positively associated with AFS
-usage after controlling for other covariates
-
-## Article \#6
-
-Nicolini G, Cude BJ. The Influence of Financial Well-Being on Pawnshop
-Use. Journal of Consumer Affairs. 2019;53(4):1674-1692. Accessed
-December 6, 2020.
-<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1845572&site=ehost-live>
-
-### Data
-
-2015 National Financial Capability Study (NFCS) State-by-State Survey
-Instrument sponsored by the Financial Industry Regulation Authority
-(FINRA)
-
-### Econometric Techniques
-
-### What question is addressed?
-
-The influence of financial well-being on pawnshop use. Financial
-well-being, based on the Consumer Financial Protection Bureau’s
-definition
-
-### Findings
-
-A higher financial well-being reduced the odds of pawnshop use by 17%,
-even after controlling for having a bank account, having a credit card,
-being financially overconfident, proximity to local pawnshops, and
-selected demographic characteristics
-
-## Article \#7
-
-Despard MR, Friedline T, Martin-West S. Why Do Households Lack Emergency
-Savings? The Role of Financial Capability. Journal of Family and
-Economic Issues. 2020;41(3):542-557. Accessed December 6, 2020.
-<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1848145&site=ehost-live>
-
-### Data
-
-2009, 2012, 2015, and 2018 National Financial Capability Study (NFCS)
-State-by-State Survey Instrument sponsored by the Financial Industry
-Regulation Authority (FINRA)
-
-### Econometric Techniques
-
-### What question is addressed?
-
-Why Do Households Lack Emergency Savings? The Role of Financial
-Capability
-
-### Findings
-
-Subjective financial knowledge, financial confidence, and savings
-account ownership, but not objective financial knowledge, were
-significant and consistent predictors of having an emergency fund.
-Savings account ownership was the strongest predictor, accounting for an
-increase in the probability of having an emergency fund of 25% to 29%
-across study years. Adding homeownership and ability to cover expenses
-to the models increased the proportion of variance explained by an
-average of 29%.
-
-## Article \#8
-
-Babiarz P, Robb CA. Financial Literacy and Emergency Saving. Journal of
-Family and Economic Issues. 2014;35(1):40-50. Accessed December 6, 2020.
-<https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1430913&site=ehost-live>
-
-### Data
-
-2009, 2012, 2015, and 2018 National Financial Capability Study (NFCS)
-State-by-State Survey Instrument sponsored by the Financial Industry
-Regulation Authority (FINRA)
-
-### Econometric Techniques
-
-### What question is addressed?
-
-This paper investigates the correlations between subjectively and
-objectively assessed measures of financial knowledge, and the
-probability of having savings adequate to cover 3 months of typical
-expenses.
-
-### Findings
-
-Results indicate that households who are more financially knowledgeable
-or more confident in their financial ability are significantly more
-likely to report having emergency funds. These findings support the
-growing literature on the relationship between financial knowledge and
-economic behaviors and have wide policy implications.
 
 Per Kevin, when I run the objective and subjective financial knowledge
 questions I should be able to see the same results as what I saw in
@@ -490,8 +252,103 @@ enough data.
 
 What should I do with the “weights” in my data?
 
+# Coding
+
+## Loading in Data
+
 ``` r
 library(haven)
 NFCS_2018_State_Data <- read_sav("NFCS 2018 State Data.sav")
 View(NFCS_2018_State_Data)
+```
+
+## Recoding Variables
+
+``` r
+attach(NFCS_2018_State_Data)
+library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+NFCS_2018_State_Data$EmergencyFund <- as.numeric(NFCS_2018_State_Data$J5) #Creating a new column for our dep. var.
+NFCS_2018_State_Data$EmergencyFund <- recode(NFCS_2018_State_Data$EmergencyFund, '1' = 1, '2' = 0) #so that a '0' = no emergency fund and '1' = yes emergency fund
+
+#NFCS_2018_State_Data$FinancialCondition <- as.factor(NFCS_2018_State_Data$J1) #Creating a new column 
+
+#samplemodel <- lm(J5 ~ J1 + J33_40 + J33_41 + G23, data = NFCS_2018_State_Data)
+#summary(samplemodel)
+#car::vif(samplemodel)
+cor(J1,J5)
+```
+
+    ## [1] 0.224398
+
+``` r
+cor(J33_40,J5)
+```
+
+    ## [1] 0.2320714
+
+``` r
+cor(J33_41,J5)
+```
+
+    ## [1] 0.2251923
+
+``` r
+cor(G23,J5)
+```
+
+    ## [1] 0.2378071
+
+``` r
+cor(J1,J33_40)
+```
+
+    ## [1] 0.268183
+
+``` r
+cor(J1,J33_41)
+```
+
+    ## [1] 0.2598679
+
+``` r
+cor(J1,G23)
+```
+
+    ## [1] 0.2284568
+
+``` r
+cor(J33_40,J33_41)
+```
+
+    ## [1] 0.6698352
+
+``` r
+cor(J33_40,G23)
+```
+
+    ## [1] 0.380633
+
+``` r
+cor(G23,J33_41)
+```
+
+    ## [1] 0.3905643
+
+``` r
+detach()
+detach()
 ```
