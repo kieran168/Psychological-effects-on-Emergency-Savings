@@ -64,191 +64,292 @@ Kieran Yuen
     ## Call:
     ## glm(formula = EmergencyFund ~ ConfidenceObj + AgeGroup + Gender + 
     ##     Race + MaritalStatus + DepChildren + EducationLevel + Income + 
-    ##     Employement + FinancesObj + AnxietyObj + StressObj + DebtObj, 
-    ##     family = binomial, data = data_use)
+    ##     Employement + FinancesObj + AnxietyObj + DebtObj, family = binomial, 
+    ##     data = data_use)
     ## 
     ## Deviance Residuals: 
     ##     Min       1Q   Median       3Q      Max  
-    ## -2.7851  -0.7348  -0.2979   0.7387   2.6510  
+    ## -2.8047  -0.7375  -0.2991   0.7433   2.6525  
     ## 
     ## Coefficients:
     ##                                Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)                     0.84941    0.09994   8.499  < 2e-16 ***
-    ## ConfidenceObjModConfidence      0.37086    0.04479   8.280  < 2e-16 ***
-    ## ConfidenceObjLowConfidence      0.65404    0.06485  10.086  < 2e-16 ***
-    ## AgeGroup25-34                  -0.14345    0.06558  -2.187  0.02872 *  
-    ## AgeGroup35-44                   0.07275    0.06749   1.078  0.28110    
-    ## AgeGroup45-54                   0.15969    0.06673   2.393  0.01671 *  
-    ## AgeGroup55-64                  -0.12878    0.06659  -1.934  0.05312 .  
-    ## AgeGroup65+                    -0.42696    0.07035  -6.069 1.29e-09 ***
-    ## GenderFemale                    0.08277    0.03347   2.473  0.01339 *  
-    ## RaceNon-White                  -0.04437    0.03803  -1.167  0.24331    
-    ## MaritalStatusNot Married        0.06546    0.03784   1.730  0.08366 .  
-    ## DepChildrenNo                  -0.20134    0.03901  -5.161 2.45e-07 ***
-    ## EducationLevelSome College     -0.20199    0.04158  -4.858 1.19e-06 ***
-    ## EducationLevelCollege Graduate -0.54938    0.04864 -11.294  < 2e-16 ***
-    ## EducationLevelAdvancedDeg      -0.57448    0.05955  -9.647  < 2e-16 ***
-    ## Income$Less than $25,000       -0.35833    0.07711  -4.647 3.37e-06 ***
-    ## Income$25,000-$50,000          -0.73878    0.06678 -11.063  < 2e-16 ***
-    ## Income$50,000-$100,000         -1.14455    0.06849 -16.711  < 2e-16 ***
-    ## Income$100,000+                -1.46655    0.07837 -18.713  < 2e-16 ***
-    ## EmployementUnemployed           0.09394    0.03978   2.361  0.01821 *  
-    ## FinancesObjModFinCond           1.07667    0.04068  26.466  < 2e-16 ***
-    ## FinancesObjLowFinCond           2.18744    0.05357  40.833  < 2e-16 ***
-    ## AnxietyObjModAnxiety           -0.05880    0.05125  -1.147  0.25125    
-    ## AnxietyObjLowAnxiety           -0.19713    0.05579  -3.533  0.00041 ***
-    ## StressObjModStress             -0.11708    0.04954  -2.364  0.01810 *  
-    ## StressObjLowStress             -0.30853    0.05218  -5.913 3.37e-09 ***
-    ## DebtObjModDebt                 -0.45610    0.04863  -9.379  < 2e-16 ***
-    ## DebtObjLowDebt                 -1.18310    0.03924 -30.154  < 2e-16 ***
+    ## (Intercept)                     0.63473    0.09024   7.034 2.01e-12 ***
+    ## ConfidenceObjModConfidence      0.38282    0.04460   8.583  < 2e-16 ***
+    ## ConfidenceObjLowConfidence      0.68198    0.06443  10.584  < 2e-16 ***
+    ## AgeGroup25-34                  -0.14810    0.06509  -2.275 0.022895 *  
+    ## AgeGroup35-44                   0.06771    0.06697   1.011 0.311969    
+    ## AgeGroup45-54                   0.14309    0.06618   2.162 0.030614 *  
+    ## AgeGroup55-64                  -0.15597    0.06594  -2.365 0.018019 *  
+    ## AgeGroup65+                    -0.46988    0.06946  -6.765 1.34e-11 ***
+    ## GenderFemale                    0.08665    0.03331   2.602 0.009275 ** 
+    ## RaceNon-White                  -0.03512    0.03785  -0.928 0.353469    
+    ## MaritalStatusNot Married        0.06984    0.03772   1.852 0.064063 .  
+    ## DepChildrenNo                  -0.20377    0.03879  -5.254 1.49e-07 ***
+    ## EducationLevelSome College     -0.21170    0.04138  -5.116 3.12e-07 ***
+    ## EducationLevelCollege Graduate -0.56776    0.04844 -11.720  < 2e-16 ***
+    ## EducationLevelAdvancedDeg      -0.58735    0.05935  -9.896  < 2e-16 ***
+    ## Income$25,000-$50,000          -0.54758    0.05057 -10.829  < 2e-16 ***
+    ## Income$50,000-$100,000         -0.95619    0.05220 -18.319  < 2e-16 ***
+    ## Income$100,000+                -1.27283    0.06417 -19.834  < 2e-16 ***
+    ## EmployementUnemployed           0.10879    0.03949   2.755 0.005865 ** 
+    ## FinancesObjModFinCond           1.06255    0.04036  26.326  < 2e-16 ***
+    ## FinancesObjLowFinCond           2.18829    0.05328  41.068  < 2e-16 ***
+    ## AnxietyObjModAnxiety           -0.15928    0.04466  -3.567 0.000362 ***
+    ## AnxietyObjLowAnxiety           -0.40755    0.04278  -9.528  < 2e-16 ***
+    ## DebtObjModDebt                 -0.46534    0.04830  -9.634  < 2e-16 ***
+    ## DebtObjLowDebt                 -1.20082    0.03884 -30.915  < 2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
-    ##     Null deviance: 34215  on 24730  degrees of freedom
-    ## Residual deviance: 23355  on 24703  degrees of freedom
-    ##   (1127 observations deleted due to missingness)
-    ## AIC: 23411
+    ##     Null deviance: 34355  on 24828  degrees of freedom
+    ## Residual deviance: 23527  on 24804  degrees of freedom
+    ##   (1029 observations deleted due to missingness)
+    ## AIC: 23577
     ## 
     ## Number of Fisher Scoring iterations: 5
 
     ##                    GVIF Df GVIF^(1/(2*Df))
-    ## ConfidenceObj  1.119544  2        1.028633
-    ## AgeGroup       1.888786  5        1.065659
-    ## Gender         1.053324  1        1.026316
-    ## Race           1.078638  1        1.038575
-    ## MaritalStatus  1.357668  1        1.165190
-    ## DepChildren    1.361550  1        1.166855
-    ## EducationLevel 1.186660  3        1.028935
-    ## Income         1.583414  4        1.059130
-    ## Employement    1.432344  1        1.196806
-    ## FinancesObj    1.207564  2        1.048281
-    ## AnxietyObj     2.503748  2        1.257905
-    ## StressObj      2.442942  2        1.250197
-    ## DebtObj        1.267364  2        1.061024
+    ## ConfidenceObj  1.116856  2        1.028015
+    ## AgeGroup       1.852139  5        1.063573
+    ## Gender         1.051232  1        1.025296
+    ## Race           1.076630  1        1.037608
+    ## MaritalStatus  1.359691  1        1.166058
+    ## DepChildren    1.355707  1        1.164348
+    ## EducationLevel 1.186241  3        1.028874
+    ## Income         1.550071  3        1.075784
+    ## Employement    1.424598  1        1.193565
+    ## FinancesObj    1.198781  2        1.046369
+    ## AnxietyObj     1.233070  2        1.053773
+    ## DebtObj        1.243654  2        1.056027
 
     ##                    (Intercept)     ConfidenceObjModConfidence 
-    ##                      2.3382693                      1.4489795 
+    ##                      1.8865202                      1.4664139 
     ##     ConfidenceObjLowConfidence                  AgeGroup25-34 
-    ##                      1.9233047                      0.8663678 
+    ##                      1.9777837                      0.8623471 
     ##                  AgeGroup35-44                  AgeGroup45-54 
-    ##                      1.0754597                      1.1731445 
+    ##                      1.0700565                      1.1538289 
     ##                  AgeGroup55-64                    AgeGroup65+ 
-    ##                      0.8791711                      0.6524869 
+    ##                      0.8555853                      0.6250790 
     ##                   GenderFemale                  RaceNon-White 
-    ##                      1.0862914                      0.9565965 
+    ##                      1.0905168                      0.9654920 
     ##       MaritalStatusNot Married                  DepChildrenNo 
-    ##                      1.0676521                      0.8176338 
+    ##                      1.0723382                      0.8156486 
     ##     EducationLevelSome College EducationLevelCollege Graduate 
-    ##                      0.8170993                      0.5773081 
-    ##      EducationLevelAdvancedDeg       Income$Less than $25,000 
-    ##                      0.5630003                      0.6988443 
-    ##          Income$25,000-$50,000         Income$50,000-$100,000 
-    ##                      0.4776948                      0.3183685 
-    ##                Income$100,000+          EmployementUnemployed 
-    ##                      0.2307212                      1.0984933 
-    ##          FinancesObjModFinCond          FinancesObjLowFinCond 
-    ##                      2.9349040                      8.9123809 
-    ##           AnxietyObjModAnxiety           AnxietyObjLowAnxiety 
-    ##                      0.9428958                      0.8210852 
-    ##             StressObjModStress             StressObjLowStress 
-    ##                      0.8895110                      0.7345266 
-    ##                 DebtObjModDebt                 DebtObjLowDebt 
-    ##                      0.6337497                      0.3063273
+    ##                      0.8092072                      0.5667949 
+    ##      EducationLevelAdvancedDeg          Income$25,000-$50,000 
+    ##                      0.5558006                      0.5783460 
+    ##         Income$50,000-$100,000                Income$100,000+ 
+    ##                      0.3843558                      0.2800381 
+    ##          EmployementUnemployed          FinancesObjModFinCond 
+    ##                      1.1149334                      2.8937295 
+    ##          FinancesObjLowFinCond           AnxietyObjModAnxiety 
+    ##                      8.9199528                      0.8527571 
+    ##           AnxietyObjLowAnxiety                 DebtObjModDebt 
+    ##                      0.6652786                      0.6279247 
+    ##                 DebtObjLowDebt 
+    ##                      0.3009483
 
 ## Complicated Regressions
 
     ## 
     ## Call:
-    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + 
-    ##     DebtObj + ConfidenceObj + StressObj:ConfidenceObj, family = binomial, 
-    ##     data = data_use)
+    ## glm(formula = EmergencyFund ~ ConfidenceObj + AgeGroup + Gender + 
+    ##     Race + MaritalStatus + DepChildren + EducationLevel + Income + 
+    ##     Employement + FinancesObj + AnxietyObj + DebtObj + ConfidenceObj:FinancesObj, 
+    ##     family = binomial, data = data_use)
     ## 
     ## Deviance Residuals: 
     ##     Min       1Q   Median       3Q      Max  
-    ## -2.3904  -0.7883  -0.4166   0.8195   2.2305  
+    ## -2.7374  -0.7377  -0.2934   0.7330   2.6667  
     ## 
     ## Coefficients:
-    ##                                               Estimate Std. Error z value
-    ## (Intercept)                                   -0.59002    0.04271 -13.814
-    ## FinancesObjModFinCond                          1.19020    0.03896  30.553
-    ## FinancesObjLowFinCond                          2.52906    0.05118  49.420
-    ## AnxietyObjModAnxiety                          -0.02815    0.04936  -0.570
-    ## AnxietyObjLowAnxiety                          -0.22918    0.05383  -4.257
-    ## StressObjModStress                            -0.20472    0.05393  -3.796
-    ## StressObjLowStress                            -0.44990    0.05459  -8.242
-    ## DebtObjModDebt                                -0.35034    0.04666  -7.509
-    ## DebtObjLowDebt                                -1.13167    0.03697 -30.611
-    ## ConfidenceObjModConfidence                     0.47462    0.06116   7.761
-    ## ConfidenceObjLowConfidence                     0.85893    0.08233  10.432
-    ## StressObjModStress:ConfidenceObjModConfidence  0.04856    0.10563   0.460
-    ## StressObjLowStress:ConfidenceObjModConfidence  0.09191    0.10278   0.894
-    ## StressObjModStress:ConfidenceObjLowConfidence  0.14380    0.16044   0.896
-    ## StressObjLowStress:ConfidenceObjLowConfidence  0.19007    0.14995   1.268
-    ##                                               Pr(>|z|)    
-    ## (Intercept)                                    < 2e-16 ***
-    ## FinancesObjModFinCond                          < 2e-16 ***
-    ## FinancesObjLowFinCond                          < 2e-16 ***
-    ## AnxietyObjModAnxiety                          0.568491    
-    ## AnxietyObjLowAnxiety                          2.07e-05 ***
-    ## StressObjModStress                            0.000147 ***
-    ## StressObjLowStress                             < 2e-16 ***
-    ## DebtObjModDebt                                5.97e-14 ***
-    ## DebtObjLowDebt                                 < 2e-16 ***
-    ## ConfidenceObjModConfidence                    8.44e-15 ***
-    ## ConfidenceObjLowConfidence                     < 2e-16 ***
-    ## StressObjModStress:ConfidenceObjModConfidence 0.645709    
-    ## StressObjLowStress:ConfidenceObjModConfidence 0.371202    
-    ## StressObjModStress:ConfidenceObjLowConfidence 0.370093    
-    ## StressObjLowStress:ConfidenceObjLowConfidence 0.204971    
+    ##                                                  Estimate Std. Error z value
+    ## (Intercept)                                       0.58208    0.09112   6.388
+    ## ConfidenceObjModConfidence                        0.66910    0.11634   5.751
+    ## ConfidenceObjLowConfidence                        1.24930    0.17499   7.139
+    ## AgeGroup25-34                                    -0.13961    0.06501  -2.148
+    ## AgeGroup35-44                                     0.07210    0.06691   1.077
+    ## AgeGroup45-54                                     0.14692    0.06613   2.222
+    ## AgeGroup55-64                                    -0.14979    0.06591  -2.273
+    ## AgeGroup65+                                      -0.46323    0.06944  -6.671
+    ## GenderFemale                                      0.08275    0.03335   2.481
+    ## RaceNon-White                                    -0.03626    0.03786  -0.958
+    ## MaritalStatusNot Married                          0.07037    0.03775   1.864
+    ## DepChildrenNo                                    -0.20437    0.03881  -5.265
+    ## EducationLevelSome College                       -0.20909    0.04139  -5.052
+    ## EducationLevelCollege Graduate                   -0.56880    0.04849 -11.731
+    ## EducationLevelAdvancedDeg                        -0.58757    0.05943  -9.886
+    ## Income$25,000-$50,000                            -0.54448    0.05056 -10.770
+    ## Income$50,000-$100,000                           -0.95188    0.05221 -18.233
+    ## Income$100,000+                                  -1.26893    0.06420 -19.765
+    ## EmployementUnemployed                             0.10824    0.03949   2.741
+    ## FinancesObjModFinCond                             1.10906    0.04387  25.279
+    ## FinancesObjLowFinCond                             2.31674    0.06240  37.130
+    ## AnxietyObjModAnxiety                             -0.16130    0.04470  -3.609
+    ## AnxietyObjLowAnxiety                             -0.40259    0.04284  -9.398
+    ## DebtObjModDebt                                   -0.46697    0.04833  -9.663
+    ## DebtObjLowDebt                                   -1.20098    0.03887 -30.899
+    ## ConfidenceObjModConfidence:FinancesObjModFinCond -0.30485    0.12833  -2.375
+    ## ConfidenceObjLowConfidence:FinancesObjModFinCond -0.51263    0.19751  -2.595
+    ## ConfidenceObjModConfidence:FinancesObjLowFinCond -0.43585    0.14820  -2.941
+    ## ConfidenceObjLowConfidence:FinancesObjLowFinCond -0.83354    0.19999  -4.168
+    ##                                                  Pr(>|z|)    
+    ## (Intercept)                                      1.68e-10 ***
+    ## ConfidenceObjModConfidence                       8.86e-09 ***
+    ## ConfidenceObjLowConfidence                       9.37e-13 ***
+    ## AgeGroup25-34                                    0.031739 *  
+    ## AgeGroup35-44                                    0.281258    
+    ## AgeGroup45-54                                    0.026311 *  
+    ## AgeGroup55-64                                    0.023045 *  
+    ## AgeGroup65+                                      2.54e-11 ***
+    ## GenderFemale                                     0.013085 *  
+    ## RaceNon-White                                    0.338166    
+    ## MaritalStatusNot Married                         0.062340 .  
+    ## DepChildrenNo                                    1.40e-07 ***
+    ## EducationLevelSome College                       4.37e-07 ***
+    ## EducationLevelCollege Graduate                    < 2e-16 ***
+    ## EducationLevelAdvancedDeg                         < 2e-16 ***
+    ## Income$25,000-$50,000                             < 2e-16 ***
+    ## Income$50,000-$100,000                            < 2e-16 ***
+    ## Income$100,000+                                   < 2e-16 ***
+    ## EmployementUnemployed                            0.006131 ** 
+    ## FinancesObjModFinCond                             < 2e-16 ***
+    ## FinancesObjLowFinCond                             < 2e-16 ***
+    ## AnxietyObjModAnxiety                             0.000308 ***
+    ## AnxietyObjLowAnxiety                              < 2e-16 ***
+    ## DebtObjModDebt                                    < 2e-16 ***
+    ## DebtObjLowDebt                                    < 2e-16 ***
+    ## ConfidenceObjModConfidence:FinancesObjModFinCond 0.017529 *  
+    ## ConfidenceObjLowConfidence:FinancesObjModFinCond 0.009446 ** 
+    ## ConfidenceObjModConfidence:FinancesObjLowFinCond 0.003272 ** 
+    ## ConfidenceObjLowConfidence:FinancesObjLowFinCond 3.07e-05 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
-    ##     Null deviance: 34215  on 24730  degrees of freedom
-    ## Residual deviance: 24648  on 24716  degrees of freedom
-    ##   (1127 observations deleted due to missingness)
-    ## AIC: 24678
+    ##     Null deviance: 34355  on 24828  degrees of freedom
+    ## Residual deviance: 23503  on 24800  degrees of freedom
+    ##   (1029 observations deleted due to missingness)
+    ## AIC: 23561
     ## 
-    ## Number of Fisher Scoring iterations: 4
+    ## Number of Fisher Scoring iterations: 5
 
-    ##                             GVIF Df GVIF^(1/(2*Df))
-    ## FinancesObj             1.152573  2        1.036137
-    ## AnxietyObj              2.498931  2        1.257299
-    ## StressObj               3.649645  2        1.382174
-    ## DebtObj                 1.186866  2        1.043759
-    ## ConfidenceObj           3.747015  2        1.391302
-    ## StressObj:ConfidenceObj 5.245624  4        1.230197
+    ##                                      (Intercept) 
+    ##                                        1.7897532 
+    ##                       ConfidenceObjModConfidence 
+    ##                                        1.9524788 
+    ##                       ConfidenceObjLowConfidence 
+    ##                                        3.4878856 
+    ##                                    AgeGroup25-34 
+    ##                                        0.8696955 
+    ##                                    AgeGroup35-44 
+    ##                                        1.0747604 
+    ##                                    AgeGroup45-54 
+    ##                                        1.1582577 
+    ##                                    AgeGroup55-64 
+    ##                                        0.8608861 
+    ##                                      AgeGroup65+ 
+    ##                                        0.6292477 
+    ##                                     GenderFemale 
+    ##                                        1.0862732 
+    ##                                    RaceNon-White 
+    ##                                        0.9643900 
+    ##                         MaritalStatusNot Married 
+    ##                                        1.0729041 
+    ##                                    DepChildrenNo 
+    ##                                        0.8151645 
+    ##                       EducationLevelSome College 
+    ##                                        0.8113226 
+    ##                   EducationLevelCollege Graduate 
+    ##                                        0.5662061 
+    ##                        EducationLevelAdvancedDeg 
+    ##                                        0.5556740 
+    ##                            Income$25,000-$50,000 
+    ##                                        0.5801440 
+    ##                           Income$50,000-$100,000 
+    ##                                        0.3860158 
+    ##                                  Income$100,000+ 
+    ##                                        0.2811316 
+    ##                            EmployementUnemployed 
+    ##                                        1.1143136 
+    ##                            FinancesObjModFinCond 
+    ##                                        3.0315002 
+    ##                            FinancesObjLowFinCond 
+    ##                                       10.1425844 
+    ##                             AnxietyObjModAnxiety 
+    ##                                        0.8510350 
+    ##                             AnxietyObjLowAnxiety 
+    ##                                        0.6685874 
+    ##                                   DebtObjModDebt 
+    ##                                        0.6268976 
+    ##                                   DebtObjLowDebt 
+    ##                                        0.3009003 
+    ## ConfidenceObjModConfidence:FinancesObjModFinCond 
+    ##                                        0.7372345 
+    ## ConfidenceObjLowConfidence:FinancesObjModFinCond 
+    ##                                        0.5989189 
+    ## ConfidenceObjModConfidence:FinancesObjLowFinCond 
+    ##                                        0.6467154 
+    ## ConfidenceObjLowConfidence:FinancesObjLowFinCond 
+    ##                                        0.4345096
 
-    ##                                   (Intercept) 
-    ##                                     0.5543182 
-    ##                         FinancesObjModFinCond 
-    ##                                     3.2877490 
-    ##                         FinancesObjLowFinCond 
-    ##                                    12.5416767 
-    ##                          AnxietyObjModAnxiety 
-    ##                                     0.9722454 
-    ##                          AnxietyObjLowAnxiety 
-    ##                                     0.7951860 
-    ##                            StressObjModStress 
-    ##                                     0.8148771 
-    ##                            StressObjLowStress 
-    ##                                     0.6376949 
-    ##                                DebtObjModDebt 
-    ##                                     0.7044510 
-    ##                                DebtObjLowDebt 
-    ##                                     0.3224931 
-    ##                    ConfidenceObjModConfidence 
-    ##                                     1.6074078 
-    ##                    ConfidenceObjLowConfidence 
-    ##                                     2.3606259 
-    ## StressObjModStress:ConfidenceObjModConfidence 
-    ##                                     1.0497605 
-    ## StressObjLowStress:ConfidenceObjModConfidence 
-    ##                                     1.0962678 
-    ## StressObjModStress:ConfidenceObjLowConfidence 
-    ##                                     1.1546512 
-    ## StressObjLowStress:ConfidenceObjLowConfidence 
-    ##                                     1.2093283
+# Tables for Paper
+
+    ## EmergencyFund
+    ##         1         0 
+    ## 0.5192204 0.4807796
+
+    ## FinancesObj
+    ## HighFinCond  ModFinCond  LowFinCond 
+    ##   0.3250176   0.4175217   0.2574606
+
+    ## AnxietyObj
+    ## HighAnxiety  ModAnxiety  LowAnxiety 
+    ##   0.5387045   0.1734196   0.2878758
+
+    ## StressObj
+    ## HighStress  ModStress  LowStress 
+    ##  0.4431734  0.1932612  0.3635654
+
+    ## DebtObj
+    ##  HighDebt   ModDebt   LowDebt 
+    ## 0.3839094 0.1470806 0.4690100
+
+    ## ConfidenceObj
+    ## HighConfidence  ModConfidence  LowConfidence 
+    ##      0.7381356      0.1616321      0.1002324
+
+    ## EducationLevel
+    ## Less than College      Some College  College Graduate       AdvancedDeg 
+    ##         0.2709026         0.3755898         0.2200480         0.1334597
+
+    ## Gender
+    ##      Male    Female 
+    ## 0.4419909 0.5580091
+
+    ## Race
+    ##     White Non-White 
+    ## 0.7439477 0.2560523
+
+    ## MaritalStatus
+    ##     Married Not Married 
+    ##   0.5355403   0.4644597
+
+    ## DepChildren
+    ##       Yes        No 
+    ## 0.3548225 0.6451775
+
+    ## Employement
+    ##   Employed Unemployed 
+    ##    0.56381    0.43619
+
+    ## Income
+    ## Less than $25,000   $25,000-$50,000  $50,000-$100,000         $100,000+ 
+    ##         0.2112306         0.2518370         0.3392374         0.1976951
+
+    ## AgeGroup
+    ##      18-24      25-34      35-44      45-54      55-64        65+ 
+    ## 0.09954366 0.17170702 0.16683425 0.17263516 0.18373424 0.20554567
