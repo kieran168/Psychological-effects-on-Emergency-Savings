@@ -9,7 +9,7 @@ output: github_document
 - save this for last
 
 # Literature Review
-Economists have been studying how people make decisions  since the beginning days of the social science.
+Economists have been studying how people make decisions since the beginning days of the social science. One of these decisions includes financial decisions. The field of economics studies 
 
 - Here are some papers I am referencing as to why having an emergency fund is important to have and talking about it's benefits
 
@@ -71,7 +71,7 @@ How does how you feel about your finances affect whether you have an emergency f
 - Here is how I am going to restrict/SUBSET the data to test my hypothesis - explain why we are excluding the Don't Know/Prefer not to answer
 - Here is how I am going to test the data to test my hypothesis
 - Here is how i prepared the data
-- Here are some summary statistics of my SUBSETTED data broken out by Age, Education Level, Labor Force Participation, income level, race, maritical status, dependent children
+- Here are some summary statistics of my SUBSETTED data broken out by Age, Education Level, Labor Force Participation, income level, race, marital status, dependent children
 - Here is a table of all my important variables in my regression with mean, standard deviation, min/max, median, average rating
 - Here is how I verified that all the important variables I will be using in my research makes sense (just talk about how the average rating you saw for one of the questions should be low because people who have a lot of debt would feel anxious about their finances - this is a correlation)
 
@@ -144,6 +144,29 @@ levels(NFCS_2018_State_Data$Question5) <- c("1","0","0","0")
 NFCS_2018_State_Data$Question6 <- as.factor(NFCS_2018_State_Data$M10)
 levels(NFCS_2018_State_Data$Question6) <- c("0","1","0","0")
 
+NFCS_2018_State_Data$AgeGroup <- as.factor(NFCS_2018_State_Data$A3Ar_w)
+levels(NFCS_2018_State_Data$AgeGroup) <- c("18-24","25-34","35-44","45-54","55-64","65+")
+
+NFCS_2018_State_Data$Gender <- as.factor(NFCS_2018_State_Data$A3)
+levels(NFCS_2018_State_Data$Gender) <- c("Male","Female")
+
+NFCS_2018_State_Data$EducationLevel <- as.factor(NFCS_2018_State_Data$A5_2015)
+levels(NFCS_2018_State_Data$EducationLevel) <- c("Less than College","Less than College", "Less than College", "Some College", "Some College", "College Graduate", "AdvancedDeg")
+
+NFCS_2018_State_Data$Race <- as.factor(NFCS_2018_State_Data$A4A_new_w)
+levels(NFCS_2018_State_Data$Race) <- c("White","Non-White")
+
+NFCS_2018_State_Data$MaritalStatus <- as.factor(NFCS_2018_State_Data$A6)
+levels(NFCS_2018_State_Data$MaritalStatus) <- c("Married","Not Married","Not Married","Not Married","Not Married")
+
+NFCS_2018_State_Data$DepChildren <- as.factor(NFCS_2018_State_Data$A11)
+levels(NFCS_2018_State_Data$DepChildren) <- c("Yes","Yes","Yes","Yes","No", "No")
+
+NFCS_2018_State_Data$Income <- as.factor(NFCS_2018_State_Data$A8)
+levels(NFCS_2018_State_Data$Income) <- c("Less than $25,000","$Less than $25,000","$25,000-$50,000","$25,000-$50,000","$50,000-$100,000","$50,000-$100,000","$100,000+","$100,000+")
+
+NFCS_2018_State_Data$Employement <- as.factor(NFCS_2018_State_Data$A9)
+levels(NFCS_2018_State_Data$Employement) <- c("Employed","Employed","Employed","Unemployed","Unemployed","Unemployed","Unemployed","Unemployed")
 
 detach()
 detach()
@@ -174,8 +197,8 @@ Low_Finances <- ((data_use$FinancialCondition>= 1) & (data_use$FinancialConditio
 FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
 
 #Ind. Var: Anxiety
-data_use$Anxiety <- as.factor(data_use$J33_40)
-levels(data_use$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Anxiety <- as.factor(data_use$J33_40)
+#levels(data_use$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Anxiety <- as.numeric(data_use$Anxiety)
 High_Anxiety <- ((data_use$Anxiety>= 5) & (data_use$Anxiety <= 7))
 Moderate_Anxiety <- ((data_use$Anxiety > 3) & (data_use$Anxiety < 5))
@@ -183,8 +206,8 @@ Low_Anxiety <- ((data_use$Anxiety>= 1) & (data_use$Anxiety <= 3))
 AnxietyObj <- factor((1*High_Anxiety + 2*Moderate_Anxiety + 3*Low_Anxiety), levels = c(1, 2, 3), labels = c( "HighAnxiety", "ModAnxiety", "LowAnxiety"))
 
 #Ind. Var: Stress
-data_use$Stress <- as.factor(data_use$J33_41)
-levels(data_use$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Stress <- as.factor(data_use$J33_41)
+#levels(data_use$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Stress <- as.numeric(data_use$Stress)
 High_Stress <- ((data_use$Stress>= 5) & (data_use$Stress <= 7))
 Moderate_Stress <- ((data_use$Stress > 3) & (data_use$Stress < 5))
@@ -192,8 +215,8 @@ Low_Stress <- ((data_use$Stress>= 1) & (data_use$Stress <= 3))
 StressObj <- factor((1*High_Stress + 2*Moderate_Stress + 3*Low_Stress), levels = c(1, 2, 3), labels = c( "HighStress", "ModStress", "LowStress"))
 
 #Ind. Var: Amount of Debt
-data_use$Debt <- as.factor(data_use$G23)
-levels(data_use$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Debt <- as.factor(data_use$G23)
+#levels(data_use$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Debt <- as.numeric(data_use$Debt)
 High_Debt <- ((data_use$Debt>= 5) & (data_use$Debt <= 7))
 Moderate_Debt <- ((data_use$Debt > 3) & (data_use$Debt < 5))
@@ -201,8 +224,8 @@ Low_Debt <- ((data_use$Debt>= 1) & (data_use$Debt <= 3))
 DebtObj<- factor((1*High_Debt + 2*Moderate_Debt + 3*Low_Debt), levels = c(1, 2, 3), labels = c( "HighDebt", "ModDebt", "LowDebt"))
 
 #Ind. Var: Subjective Financial Knowledge (Confidence)
-data_use$Confidence <- as.factor(data_use$M4)
-levels(data_use$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Confidence <- as.factor(data_use$M4)
+#levels(data_use$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Confidence <- as.numeric(data_use$Confidence)
 High_Confidence <- ((data_use$Confidence>= 5) & (data_use$Confidence <= 7))
 Moderate_Confidence <- ((data_use$Confidence > 3) & (data_use$Confidence < 5))
@@ -214,9 +237,11 @@ detach()
 detach()
 ```
 
+
+
 ## Simple Regressions
 ```{r Logit Model}
-logitmodel <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + DebtObj, family = binomial, data = data_use)
+logitmodel <- glm(EmergencyFund ~ ConfidenceObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement + FinancesObj + AnxietyObj + StressObj + DebtObj, family = binomial, data = data_use)
 summary(logitmodel)
 car::vif(logitmodel)
 
@@ -228,13 +253,7 @@ exp(coefficients(logitmodel))
 
 
 
-```{r Logit Model of Subjective Financial Knowledge}
-subjectivemodel <- glm(EmergencyFund ~ ConfidenceObj, family = binomial, data = data_use)
-summary(subjectivemodel)
 
-exp(coefficients(subjectivemodel))
-
-```
 
 ## Complicated Regressions
 ```{r Logit Model with Interactions}

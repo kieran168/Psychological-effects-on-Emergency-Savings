@@ -9,7 +9,8 @@ Kieran Yuen
 # Literature Review
 
 Economists have been studying how people make decisions since the
-beginning days of the social science.
+beginning days of the social science. One of these decisions includes
+financial decisions. The field of economics studies
 
   - Here are some papers I am referencing as to why having an emergency
     fund is important to have and talking about it’s benefits
@@ -118,13 +119,13 @@ excluding the Don’t Know/Prefer not to answer - Here is how I am going
 to test the data to test my hypothesis - Here is how i prepared the data
 - Here are some summary statistics of my SUBSETTED data broken out by
 Age, Education Level, Labor Force Participation, income level, race,
-maritical status, dependent children - Here is a table of all my
-important variables in my regression with mean, standard deviation,
-min/max, median, average rating - Here is how I verified that all the
-important variables I will be using in my research makes sense (just
-talk about how the average rating you saw for one of the questions
-should be low because people who have a lot of debt would feel anxious
-about their finances - this is a correlation)
+marital status, dependent children - Here is a table of all my important
+variables in my regression with mean, standard deviation, min/max,
+median, average rating - Here is how I verified that all the important
+variables I will be using in my research makes sense (just talk about
+how the average rating you saw for one of the questions should be low
+because people who have a lot of debt would feel anxious about their
+finances - this is a correlation)
 
 ## Means (simple graphs, correlations, differences of means)
 
@@ -259,6 +260,29 @@ levels(NFCS_2018_State_Data$Question5) <- c("1","0","0","0")
 NFCS_2018_State_Data$Question6 <- as.factor(NFCS_2018_State_Data$M10)
 levels(NFCS_2018_State_Data$Question6) <- c("0","1","0","0")
 
+NFCS_2018_State_Data$AgeGroup <- as.factor(NFCS_2018_State_Data$A3Ar_w)
+levels(NFCS_2018_State_Data$AgeGroup) <- c("18-24","25-34","35-44","45-54","55-64","65+")
+
+NFCS_2018_State_Data$Gender <- as.factor(NFCS_2018_State_Data$A3)
+levels(NFCS_2018_State_Data$Gender) <- c("Male","Female")
+
+NFCS_2018_State_Data$EducationLevel <- as.factor(NFCS_2018_State_Data$A5_2015)
+levels(NFCS_2018_State_Data$EducationLevel) <- c("Less than College","Less than College", "Less than College", "Some College", "Some College", "College Graduate", "AdvancedDeg")
+
+NFCS_2018_State_Data$Race <- as.factor(NFCS_2018_State_Data$A4A_new_w)
+levels(NFCS_2018_State_Data$Race) <- c("White","Non-White")
+
+NFCS_2018_State_Data$MaritalStatus <- as.factor(NFCS_2018_State_Data$A6)
+levels(NFCS_2018_State_Data$MaritalStatus) <- c("Married","Not Married","Not Married","Not Married","Not Married")
+
+NFCS_2018_State_Data$DepChildren <- as.factor(NFCS_2018_State_Data$A11)
+levels(NFCS_2018_State_Data$DepChildren) <- c("Yes","Yes","Yes","Yes","No", "No")
+
+NFCS_2018_State_Data$Income <- as.factor(NFCS_2018_State_Data$A8)
+levels(NFCS_2018_State_Data$Income) <- c("Less than $25,000","$Less than $25,000","$25,000-$50,000","$25,000-$50,000","$50,000-$100,000","$50,000-$100,000","$100,000+","$100,000+")
+
+NFCS_2018_State_Data$Employement <- as.factor(NFCS_2018_State_Data$A9)
+levels(NFCS_2018_State_Data$Employement) <- c("Employed","Employed","Employed","Unemployed","Unemployed","Unemployed","Unemployed","Unemployed")
 
 detach()
 detach()
@@ -300,8 +324,8 @@ Low_Finances <- ((data_use$FinancialCondition>= 1) & (data_use$FinancialConditio
 FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
 
 #Ind. Var: Anxiety
-data_use$Anxiety <- as.factor(data_use$J33_40)
-levels(data_use$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Anxiety <- as.factor(data_use$J33_40)
+#levels(data_use$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Anxiety <- as.numeric(data_use$Anxiety)
 High_Anxiety <- ((data_use$Anxiety>= 5) & (data_use$Anxiety <= 7))
 Moderate_Anxiety <- ((data_use$Anxiety > 3) & (data_use$Anxiety < 5))
@@ -309,8 +333,8 @@ Low_Anxiety <- ((data_use$Anxiety>= 1) & (data_use$Anxiety <= 3))
 AnxietyObj <- factor((1*High_Anxiety + 2*Moderate_Anxiety + 3*Low_Anxiety), levels = c(1, 2, 3), labels = c( "HighAnxiety", "ModAnxiety", "LowAnxiety"))
 
 #Ind. Var: Stress
-data_use$Stress <- as.factor(data_use$J33_41)
-levels(data_use$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Stress <- as.factor(data_use$J33_41)
+#levels(data_use$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Stress <- as.numeric(data_use$Stress)
 High_Stress <- ((data_use$Stress>= 5) & (data_use$Stress <= 7))
 Moderate_Stress <- ((data_use$Stress > 3) & (data_use$Stress < 5))
@@ -318,8 +342,8 @@ Low_Stress <- ((data_use$Stress>= 1) & (data_use$Stress <= 3))
 StressObj <- factor((1*High_Stress + 2*Moderate_Stress + 3*Low_Stress), levels = c(1, 2, 3), labels = c( "HighStress", "ModStress", "LowStress"))
 
 #Ind. Var: Amount of Debt
-data_use$Debt <- as.factor(data_use$G23)
-levels(data_use$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Debt <- as.factor(data_use$G23)
+#levels(data_use$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Debt <- as.numeric(data_use$Debt)
 High_Debt <- ((data_use$Debt>= 5) & (data_use$Debt <= 7))
 Moderate_Debt <- ((data_use$Debt > 3) & (data_use$Debt < 5))
@@ -327,8 +351,8 @@ Low_Debt <- ((data_use$Debt>= 1) & (data_use$Debt <= 3))
 DebtObj<- factor((1*High_Debt + 2*Moderate_Debt + 3*Low_Debt), levels = c(1, 2, 3), labels = c( "HighDebt", "ModDebt", "LowDebt"))
 
 #Ind. Var: Subjective Financial Knowledge (Confidence)
-data_use$Confidence <- as.factor(data_use$M4)
-levels(data_use$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
+#data_use$Confidence <- as.factor(data_use$M4)
+#levels(data_use$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
 data_use$Confidence <- as.numeric(data_use$Confidence)
 High_Confidence <- ((data_use$Confidence>= 5) & (data_use$Confidence <= 7))
 Moderate_Confidence <- ((data_use$Confidence > 3) & (data_use$Confidence < 5))
@@ -343,102 +367,114 @@ detach()
 ## Simple Regressions
 
 ``` r
-logitmodel <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + DebtObj, family = binomial, data = data_use)
+logitmodel <- glm(EmergencyFund ~ ConfidenceObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement + FinancesObj + AnxietyObj + StressObj + DebtObj, family = binomial, data = data_use)
 summary(logitmodel)
 ```
 
     ## 
     ## Call:
-    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + StressObj + 
-    ##     DebtObj, family = binomial, data = data_use)
+    ## glm(formula = EmergencyFund ~ ConfidenceObj + AgeGroup + Gender + 
+    ##     Race + MaritalStatus + DepChildren + EducationLevel + Income + 
+    ##     Employement + FinancesObj + AnxietyObj + StressObj + DebtObj, 
+    ##     family = binomial, data = data_use)
     ## 
     ## Deviance Residuals: 
     ##     Min       1Q   Median       3Q      Max  
-    ## -2.1628  -0.8041  -0.4294   0.8821   2.2044  
+    ## -2.7851  -0.7348  -0.2979   0.7387   2.6510  
     ## 
     ## Coefficients:
-    ##                       Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)           -0.52510    0.04103 -12.799  < 2e-16 ***
-    ## FinancesObjModFinCond  1.26848    0.03807  33.321  < 2e-16 ***
-    ## FinancesObjLowFinCond  2.76246    0.04914  56.211  < 2e-16 ***
-    ## AnxietyObjModAnxiety  -0.02821    0.04865  -0.580    0.562    
-    ## AnxietyObjLowAnxiety  -0.24956    0.05284  -4.723 2.33e-06 ***
-    ## StressObjModStress    -0.18855    0.04733  -3.983 6.79e-05 ***
-    ## StressObjLowStress    -0.46846    0.04955  -9.454  < 2e-16 ***
-    ## DebtObjModDebt        -0.30137    0.04587  -6.570 5.02e-11 ***
-    ## DebtObjLowDebt        -1.09440    0.03633 -30.120  < 2e-16 ***
+    ##                                Estimate Std. Error z value Pr(>|z|)    
+    ## (Intercept)                     0.84941    0.09994   8.499  < 2e-16 ***
+    ## ConfidenceObjModConfidence      0.37086    0.04479   8.280  < 2e-16 ***
+    ## ConfidenceObjLowConfidence      0.65404    0.06485  10.086  < 2e-16 ***
+    ## AgeGroup25-34                  -0.14345    0.06558  -2.187  0.02872 *  
+    ## AgeGroup35-44                   0.07275    0.06749   1.078  0.28110    
+    ## AgeGroup45-54                   0.15969    0.06673   2.393  0.01671 *  
+    ## AgeGroup55-64                  -0.12878    0.06659  -1.934  0.05312 .  
+    ## AgeGroup65+                    -0.42696    0.07035  -6.069 1.29e-09 ***
+    ## GenderFemale                    0.08277    0.03347   2.473  0.01339 *  
+    ## RaceNon-White                  -0.04437    0.03803  -1.167  0.24331    
+    ## MaritalStatusNot Married        0.06546    0.03784   1.730  0.08366 .  
+    ## DepChildrenNo                  -0.20134    0.03901  -5.161 2.45e-07 ***
+    ## EducationLevelSome College     -0.20199    0.04158  -4.858 1.19e-06 ***
+    ## EducationLevelCollege Graduate -0.54938    0.04864 -11.294  < 2e-16 ***
+    ## EducationLevelAdvancedDeg      -0.57448    0.05955  -9.647  < 2e-16 ***
+    ## Income$Less than $25,000       -0.35833    0.07711  -4.647 3.37e-06 ***
+    ## Income$25,000-$50,000          -0.73878    0.06678 -11.063  < 2e-16 ***
+    ## Income$50,000-$100,000         -1.14455    0.06849 -16.711  < 2e-16 ***
+    ## Income$100,000+                -1.46655    0.07837 -18.713  < 2e-16 ***
+    ## EmployementUnemployed           0.09394    0.03978   2.361  0.01821 *  
+    ## FinancesObjModFinCond           1.07667    0.04068  26.466  < 2e-16 ***
+    ## FinancesObjLowFinCond           2.18744    0.05357  40.833  < 2e-16 ***
+    ## AnxietyObjModAnxiety           -0.05880    0.05125  -1.147  0.25125    
+    ## AnxietyObjLowAnxiety           -0.19713    0.05579  -3.533  0.00041 ***
+    ## StressObjModStress             -0.11708    0.04954  -2.364  0.01810 *  
+    ## StressObjLowStress             -0.30853    0.05218  -5.913 3.37e-09 ***
+    ## DebtObjModDebt                 -0.45610    0.04863  -9.379  < 2e-16 ***
+    ## DebtObjLowDebt                 -1.18310    0.03924 -30.154  < 2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
-    ##     Null deviance: 34684  on 25060  degrees of freedom
-    ## Residual deviance: 25340  on 25052  degrees of freedom
-    ##   (797 observations deleted due to missingness)
-    ## AIC: 25358
+    ##     Null deviance: 34215  on 24730  degrees of freedom
+    ## Residual deviance: 23355  on 24703  degrees of freedom
+    ##   (1127 observations deleted due to missingness)
+    ## AIC: 23411
     ## 
-    ## Number of Fisher Scoring iterations: 4
+    ## Number of Fisher Scoring iterations: 5
 
 ``` r
 car::vif(logitmodel)
 ```
 
-    ##                 GVIF Df GVIF^(1/(2*Df))
-    ## FinancesObj 1.087506  2        1.021193
-    ## AnxietyObj  2.502737  2        1.257777
-    ## StressObj   2.435859  2        1.249289
-    ## DebtObj     1.178690  2        1.041957
+    ##                    GVIF Df GVIF^(1/(2*Df))
+    ## ConfidenceObj  1.119544  2        1.028633
+    ## AgeGroup       1.888786  5        1.065659
+    ## Gender         1.053324  1        1.026316
+    ## Race           1.078638  1        1.038575
+    ## MaritalStatus  1.357668  1        1.165190
+    ## DepChildren    1.361550  1        1.166855
+    ## EducationLevel 1.186660  3        1.028935
+    ## Income         1.583414  4        1.059130
+    ## Employement    1.432344  1        1.196806
+    ## FinancesObj    1.207564  2        1.048281
+    ## AnxietyObj     2.503748  2        1.257905
+    ## StressObj      2.442942  2        1.250197
+    ## DebtObj        1.267364  2        1.061024
 
 ``` r
 exp(coefficients(logitmodel))
 ```
 
-    ##           (Intercept) FinancesObjModFinCond FinancesObjLowFinCond 
-    ##             0.5914949             3.5554290            15.8387430 
-    ##  AnxietyObjModAnxiety  AnxietyObjLowAnxiety    StressObjModStress 
-    ##             0.9721854             0.7791446             0.8281583 
-    ##    StressObjLowStress        DebtObjModDebt        DebtObjLowDebt 
-    ##             0.6259684             0.7398070             0.3347391
-
-``` r
-subjectivemodel <- glm(EmergencyFund ~ ConfidenceObj, family = binomial, data = data_use)
-summary(subjectivemodel)
-```
-
-    ## 
-    ## Call:
-    ## glm(formula = EmergencyFund ~ ConfidenceObj, family = binomial, 
-    ##     data = data_use)
-    ## 
-    ## Deviance Residuals: 
-    ##     Min       1Q   Median       3Q      Max  
-    ## -1.8085  -0.9979  -0.9979   1.3682   1.3682  
-    ## 
-    ## Coefficients:
-    ##                            Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)                -0.43799    0.01496  -29.28   <2e-16 ***
-    ## ConfidenceObjModConfidence  1.11364    0.03625   30.72   <2e-16 ***
-    ## ConfidenceObjLowConfidence  1.85652    0.05223   35.55   <2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## (Dispersion parameter for binomial family taken to be 1)
-    ## 
-    ##     Null deviance: 35147  on 25390  degrees of freedom
-    ## Residual deviance: 32861  on 25388  degrees of freedom
-    ##   (467 observations deleted due to missingness)
-    ## AIC: 32867
-    ## 
-    ## Number of Fisher Scoring iterations: 4
-
-``` r
-exp(coefficients(subjectivemodel))
-```
-
-    ##                (Intercept) ConfidenceObjModConfidence 
-    ##                   0.645334                   3.045427 
-    ## ConfidenceObjLowConfidence 
-    ##                   6.401411
+    ##                    (Intercept)     ConfidenceObjModConfidence 
+    ##                      2.3382693                      1.4489795 
+    ##     ConfidenceObjLowConfidence                  AgeGroup25-34 
+    ##                      1.9233047                      0.8663678 
+    ##                  AgeGroup35-44                  AgeGroup45-54 
+    ##                      1.0754597                      1.1731445 
+    ##                  AgeGroup55-64                    AgeGroup65+ 
+    ##                      0.8791711                      0.6524869 
+    ##                   GenderFemale                  RaceNon-White 
+    ##                      1.0862914                      0.9565965 
+    ##       MaritalStatusNot Married                  DepChildrenNo 
+    ##                      1.0676521                      0.8176338 
+    ##     EducationLevelSome College EducationLevelCollege Graduate 
+    ##                      0.8170993                      0.5773081 
+    ##      EducationLevelAdvancedDeg       Income$Less than $25,000 
+    ##                      0.5630003                      0.6988443 
+    ##          Income$25,000-$50,000         Income$50,000-$100,000 
+    ##                      0.4776948                      0.3183685 
+    ##                Income$100,000+          EmployementUnemployed 
+    ##                      0.2307212                      1.0984933 
+    ##          FinancesObjModFinCond          FinancesObjLowFinCond 
+    ##                      2.9349040                      8.9123809 
+    ##           AnxietyObjModAnxiety           AnxietyObjLowAnxiety 
+    ##                      0.9428958                      0.8210852 
+    ##             StressObjModStress             StressObjLowStress 
+    ##                      0.8895110                      0.7345266 
+    ##                 DebtObjModDebt                 DebtObjLowDebt 
+    ##                      0.6337497                      0.3063273
 
 ## Complicated Regressions
 
