@@ -1,11 +1,9 @@
 ---
-title: "Mental well-being and emergency savings"
+title: "Psychological effects on likelihood of having an emergency fund"
 font-family: 'Corbel'
 author: Kieran Yuen
 output: github_document
 ---
-
-
 
 # Loading in Data
 ```{r Loading NFCS database}
@@ -212,15 +210,10 @@ exp(coefficients(logitmodel3))
 
 ## TABLE 6. Logistic Model with Interaction between Anxiety and Confidence
 ```{r TABLE 6. Logistic Model with Interaction between Anxiety and Confidence}
-interactionmodel1 <- glm(EmergencyFund ~ FinancesObj + DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement + AnxietyObj:ConfidenceObj, family = binomial, data = data_use)
+interactionmodel1 <- glm(EmergencyFund ~ AnxietyObj:ConfidenceObj + FinancesObj + DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement, family = binomial, data = data_use)
 summary(interactionmodel1)
 
 exp(coefficients(interactionmodel1))
 ```
-
-
-
-
-
 
 

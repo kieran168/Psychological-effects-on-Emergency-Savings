@@ -1,4 +1,4 @@
-Mental well-being and emergency savings
+Psychological effects on likelihood of having an emergency fund
 ================
 Kieran Yuen
 
@@ -456,15 +456,15 @@ exp(coefficients(logitmodel3))
 ## TABLE 6. Logistic Model with Interaction between Anxiety and Confidence
 
 ``` r
-interactionmodel1 <- glm(EmergencyFund ~ FinancesObj + DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement + AnxietyObj:ConfidenceObj, family = binomial, data = data_use)
+interactionmodel1 <- glm(EmergencyFund ~ AnxietyObj:ConfidenceObj + FinancesObj + DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement, family = binomial, data = data_use)
 summary(interactionmodel1)
 ```
 
     ## 
     ## Call:
-    ## glm(formula = EmergencyFund ~ FinancesObj + DebtObj + AgeGroup + 
-    ##     Gender + Race + MaritalStatus + DepChildren + EducationLevel + 
-    ##     Income + Employement + AnxietyObj:ConfidenceObj, family = binomial, 
+    ## glm(formula = EmergencyFund ~ AnxietyObj:ConfidenceObj + FinancesObj + 
+    ##     DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + 
+    ##     EducationLevel + Income + Employement, family = binomial, 
     ##     data = data_use)
     ## 
     ## Deviance Residuals: 
