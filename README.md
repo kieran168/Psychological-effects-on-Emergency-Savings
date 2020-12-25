@@ -75,12 +75,19 @@ Factoring in what we learned about the negative relationship between higher leve
 
 # References
 Beierlein JJ, Neverett M. Who takes personal finance? Financial Services Review. 2013;22(2):151-171. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=bth&AN=94644713&site=ehost-live
+
 Despard MR, Friedline T, Martin-West S. Why Do Households Lack Emergency Savings? The Role of Financial Capability. Journal of Family and Economic Issues. 2020;41(3):542-557. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1848145&site=ehost-live 
-Financial Industry Regulatory Authority. (2018). Financial capability in the United States: Report of findings from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads.php NFCS_2018_Report_Natl_Findings.pdf 
+
+Financial Industry Regulatory Authority. (2018). Financial capability in the United States: Report of findings from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads.php NFCS_2018_Report_Natl_Findings.pdf
+
 Financial Industry Regulatory Authority. (2018). Financial capability in the United States: State-by-State Survey Methodology from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads/NFCS_2018_State_by_State_Meth.pdf
+
 Henager, Robin and Cude, Brenda J. Financial Literacy and Long- and Short-Term Financial Behavior in Different Age Groups. Journal of Financial Counseling and Planning Vol 27, 3-19 (2016). https://connect.springerpub.com/content/sgrjfcp/27/1/3
+
 Henager, R., Cude, B.J. Financial Literacy of High School Graduates: Long- and Short-Term Financial Behavior by Age Group. J Fam Econ Iss 40, 564–575 (2019). https://doi.org/10.1007/s10834-019-09626-2
+
 Huston SJ. Measuring Financial Literacy. Journal of Consumer Affairs. 2010;44(2):296-316. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1112007&site=ehost-live
+
 St. Louis Fed, (2020). “Student Loans Owned and Securitized, Outstanding”https://fred.stlouisfed.org/graph/?g=yTyF accessed Dec 18, 2020.
 
 
