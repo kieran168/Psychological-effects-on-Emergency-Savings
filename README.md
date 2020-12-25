@@ -1,612 +1,87 @@
+Introduction
+The purpose of this study was to examine the relationship between psychological factors such as stress or anxiety and the positive financial behavior of having three months of expenses in an emergency or rainy day fund. Psychological factors were measured as responses to four questions in the National Financial Capability Study (NFCS) survey. The questions covered satisfaction with financial condition, anxiety when thinking about finances, how respondents felt about their level of debt and how confident they were in their financial knowledge. The findings were that these psychological factors appear to be good predictors of a respondent having an emergency fund.
+Literature Review
+A central theme of research related to financial literacy has been that more knowledge leads to wiser financial decisions. Henager and Cude (Henegar & Cude, 2016) have studied financial decisions made by individuals and have found that objective knowledge of financial understanding are associated with making positive short-term and long-term financial decisions. In this case, the objective knowledge was determined by a set of six questions that ranged from interest rates and bond prices to mortgage interest calculation. Questions that economists would think a rational citizen (an "econ") should know. They also assessed subjective financial knowledge and found that it also associates. Confidence in one self about a certain topic matters in how well you perform in it. 
+Henegar and Cude utilized the conceptual framework from Huston (Huston, 2010) (see Figure 1) where she created a standardized framework to help future researchers have a guide to follow when it comes to addressing financial literacy. This research paper will be utilizing the infographic that was created by Henegar and Cude in their 2016 paper (Henegar & Cude, 2016 p. 5). Huston created this framework around the time of the Great Recession of 2008-2009 and had been inspired to do so as a result of “the recent mortgage crisis, consumer overindebtedness and household bankruptcy rates.” According to Huston, financial literacy was being given little attention on how it was measured. Her long-term goal is to help build up research on the measurement of financial literacy so that comparison studies can be done and/or meta-analysis. This article will aim to add to that data by studying influences that do not appear to have been given much focus in the latest research.
+Besides objective knowledge or confidence in one's financial knowledge, there are also other factors that influence a person's financial behavior. Henegar and Cude pointed out age groups as an "other influence" that they focused on in their 2016 research using the same NFCS database (Henegar & Cude 2016). This research paper will be attempting to assess psychological effects such as stress and anxiety to see how they play a role in how a person behaves, including how they make financial decisions. Following Huston's framework of financial literacy, these psychological effects fall into the "other influences." Attempting to fill the gap of finding associations between psychological factors and financial well-being is what serves as the motivation for this research paper which will be focusing on the psychological questions from the NFCS study.
+
+
+Hypothesis
+Based on Huston’s conceptual framework of financial literacy, there are many different influences that affect financial behavior which help determine how financial well-being is determined. This article will be focusing on the “Other Influences” portion of the conceptual framework in helping to try to explain a specific financial behavior, saving for an emergency fund. An emergency fund is generally thought of as three months of expenses in a bank account ready to be deployed in case of an emergency. Emergency savings can come in many forms besides a savings account, they can range from a plot of land to an inheritance. But in the case of this article, we will be focusing on the question “Have you set aside emergency or rainy day funds that would cover your expenses for 3 months, in case of sickness, job loss, economic downturn, or other emergencies?” from the NFCS questionnaire (attached: NFCS_2018_State_by_State_Qre.pdf).
+This research paper’s hypothesis starts with the premise that having an emergency fund is a positive financial behavior, similar to how other researchers including Henegar and Cude have categorized it.. Many events cannot be anticipated which is why an emergency fund is necessary to be able to smooth out levels of consumption. That is why this question was included in the NFCS survey and also as a dependent variable in Henegar and Cude’s 2016 and 2019 study of the NFCS data (Henegar and Cude, 2016 p.7 & 2019 p.565). The motivation for focusing on this variable is born from personal experience and in seeing the usefulness of having such emergency funds available at hand. 
+The overall goal of this study is to assess the likelihood of someone having an emergency fund based on certain key psychological-related variables and evaluate how these vary with underlying demographic characteristics. 
+Based on the above discussion, the following hypothesis was tested:
+After controlling for other demographic characteristics, high stress and high anxiety positively predict a person to have an emergency fund.
+
+Methods 
+Data and Sample
+The dataset this article uses is from the National Financial Capability Study (NFCS) which was funded by the FINRA Investor Education Foundation and conducted by ARC Research. The data can be downloaded here: https://www.usfinancialcapability.org/downloads.php. This study has been conducted in 2009, 2012, 2015, and 2018. We will be using the 2018 dataset. This data was collected by the FINRA foundation through ARC Research online from June through October 2018 among a nationally-representative sample of 27,091 American adults, reaching approximately 500 individuals per state, plus the District of Columbia (FINRA, 2018). The final sample used was 25,858 as the observations who answered “Don't know" or "Prefer not to say" to the emergency fund question were excluded.
+
+Dependent Variable
+Descriptions of dependent and independent variables used in this research are detailed in Table 1.
+The dependent variable will be question #J5 in the 2018 NFCS survey: Have you set aside emergency or rainy day funds that would cover your expenses for 3 months, in case of sickness, job loss, economic downturn, or other emergencies? The available answers were: "Yes," "No," "Don't know," and "Prefer not to say." A binary variable was created where "1" corresponding to "Yes" and "0" corresponding to "No" this individual did not have an emergency fund. Responses where the answers were "Don't know" or "Prefer not to say" were not included in the analysis.
+
+Independent Variables
+The primary focus of this research are the psychological factors such as stress and anxiety that can affect financial behavior. In the survey, four questions were asked of the respondents that focused on how they felt about their finances and how thinking or talking about their finances made them feel.
+The first question asks the respondent to think about their assets, debts and savings and to rate on a scale of 1 (Not At All Satisfied) to 10 (Extremely Satisfied) how satisfied they were with their current financial situation. This question appears to be rating how well a respondent is doing in financial terms by asking about assets, debts and savings, but it is actually asking how satisfied the respondent is with their own personal financial situation. So someone who has a high income can still give a low satisfaction rating when in fact they could be financially better off than a low income respondent who rates themselves with a higher satisfaction rating. 
+The next two questions ask the respondent if they feel stressed or anxious when thinking about or talking about their finances. These two questions help the research in gauging how a respondent feels about their financial picture as a whole. The range of answers given allow the respondent free range to give a response appropriate for them. With “1” being “strongly disagree” and “7” being “strongly agree” these responses will allow the research to see how stress and anxiety factor into someone’s decision to have an emergency fund or not.
+The last question asks the respondent if they feel they have too much debt right now. Once again, this question asks how the respondent feels about their personal financial situation with the same range of responses allowed as the previous two questions.
+These four questions along with underlying demographic characteristics will help guide this research towards focusing on how psychological factors influence an important short-term financial behavior, saving for an emergency fund.
+A final variable of subjective financial knowledge (confidence) is included as an independent variable into this research so that we can see the interaction effects with one of our key independent variables related to anxiety. Subjective financial knowledge has already been concluded by Henegar and Cude in their two studies to be positively associated with short-term financial behaviors, of which the three-month emergency fund question that is being studied here in this research is included in (Henagar & Cude, 2016, p.7) (Henagar & Cude, 2019, p.567).
+
+Multicollinearity
+Of these five key independent variables, the questions asking about “stress” and “anxiety” had some correlations with one another, indicating that these two questions were possibly measuring the same thing. The correlation coefficient was 0.67. This means that both variables had some correlation with each other. Further checks for multicollinearity were done on the independent variables being included using Generalized Variance Inflation Factor (GVIF) and found the anxiety question to have a GVIF of 2.50 and the Stress question to have a GVIF of 2.44. Also, these two questions were grouped together under the same question (“How Strongly do you agree or disagree with the following statements?”) as sub-questions. Lastly, the proportion of respondent’s answers to these two questions were similar in the high, moderate and low categories (High/Medium/Low - Anxiety:0.54/0.17/0.29; Stress 0.44/0.19/0.37). So based on these points we will exclude one of the two questions from the statistical models as both appear too similar. The stress question will be excluded as the framing of that question includes the words “make my heart race” which seems more specific than the anxious question at assessing the respondent's psychological mindset. While the aim of this research study is to assess on a general level of psychological stress/anxiety.
+
+
+Data Analysis Procedures
+A logistic regression is used in this research, with the emergency fund question as the dependent variable coded as a binary variable of “1” for “Yes” and “0” for “No” and the four independent variables as regressors along with other demographic data. As our dependent variable is categorical, a logistic regression is used so that we can see the likelihood of a respondent having an emergency fund based on the answers they provided on the four key independent variables. The Generalized Variance Inflation Factor was also run to check for multicollinearity among the four key independent variables and demographic variables and there appears to be no multicollinearity amongst the variables with GVIF scores ranging from 1.05 - 1.85.
+Since we have coded the scales (1-10 & 1-7) into three categories for each question into Low, Moderate or High, one of the three will be dropped when the logistic regression is run so that one serves as the reference group the other two will be compared to. In order to address the hypothesis, we will be choosing which of the three variables will drop that is of least importance to addressing the hypothesis. Namely, for the financial condition question, we will let the regression drop “High Satisfaction” as a respondent who is highly satisfied with their financial condition does not fit within the hypothesis’ scope of stress, anxiety and worrying psychological factors. For the anxiety question, we will let “Low Anxiety” drop. For the debt question, we will let “Low Debt” drop. And for the confidence question, we will let “High Confidence” drop.
+First, a logistic regression was run on the four key independent variables along with the demographic variables to see the effect each variable has on the likelihood of having an emergency fund.
+Next, we will run the logistic regression with an interaction term between the subjective financial knowledge (confidence) variable and the variable assessing a respondent’s overall financial condition. This will help us see how confidence in a respondent’s own financial knowledge relates to how satisfied they are with their financial situation and how that helps determine their likelihood of having an emergency fund.
+
+
+Descriptive Statistics
+Descriptive statistics are reported in Table 2. 
+About half (52%) of the sample stated they had a set aside three months of expenses as an emergency fund. For the question about satisfaction with their financial condition, exactly a third (33%) stated they were highly satisfied with their financial situation and a little less than a third (26%) stated they leaned towards not satisfied at all. But most answered that they were moderately satisfied at 42%. The question on anxiety had the largest share of “High” ratings at 54% of all the four questions we included in our research. This means they rated their anxiety between 5-7 on a scale of 1-7. For the question about their assessment of how they feel about their debt, a majority indicated they either agree or disagree. 38% leaned towards agree and 47% leaned towards disagree. Only 15% of people felt indifferent about their debt. As for the last question on how confident a respondent was about their overall financial knowledge, most rated themselves a 5-7 on a scale from 1-7 at 74%. This appears quite high but could also be attributable to the overconfidence bias. 
+
+
+
+Results
 Psychological effects on likelihood of having an emergency fund
-================
-Kieran Yuen
+Table 3 reports the results of the logistic regression run on the full sample but specifically for the independent variables. The independent variables we chose to represent the psychological factors that we were assessing for predicting power appear to be significant and able to predict that a person who shows high anxiety about their finances, low satisfaction with their finances and/or feelings of too much debt has an emergency fund. 
+The regression results appear to show that those who are under psychological anxiety, are feeling low about their financial condition or feel they have too much debt have higher odds of having an emergency fund. The respondents who reported “High” anxiety appear to have 50% higher odds than someone who reported “Low” anxiety to have an emergency fund. While someone who reported to be feeling “Low” about their overall financial condition has 8.92 times higher odds than someone who feels “High” about their overall financial condition. And someone who answered “High” on the debt question has 3.32 times higher odds than someone who reported “Low” to that question to have an emergency fund.
+The hypothesis of psychological factors such as high anxiety being a predictor variable for the presence of an emergency fund appears to be supported.
 
-# Loading in Data
+To further check this pattern of relationships, the logistic regression was run again but with all other variables removed except for the four key variables displayed in Table 3. The results are displayed in Table 4 and the pattern of relationships appears to hold. 
 
-``` r
-library(haven)
-NFCS_2018_State_Data <- read_sav("NFCS 2018 State Data.sav")
-View(NFCS_2018_State_Data)
-detach()
-```
+As a robustness check against the model, we run another logistic regression with emergency fund as the dependent variable and the income groups as the independent variable. This will allow us to check if the opposite of our model of high anxiety and high debt is also true - those respondents with higher incomes will most likely not have a need for an emergency fund. We can see from this crosstab of the overall financial condition and income that lower incomes report closer towards the “1” range while those with higher incomes tend to report closer to “10” for the overall financial condition question.
 
-# Preliminary Multicollinearity Check
 
-    ## [1] 0.224398
+The robustness check performed using incomes is displayed in Table 5 along with the crosstab in Table 5a. These tables confirm that as incomes increase, the odds drop dramatically for respondents to have an emergency fund. 
+Next, we adjusted our model to include interaction terms to see the relationship between the subjective financial knowledge (confidence) variable with the anxiety variable. The confidence variable has already been tested by Henegar and Cude in their 2016 and 2019 study of the NFCS data where they found confidence in financial knowledge to be positively associated with positive short-term financial behavior (Henegar and Cude, 2016 p.12 & 2019 p.569). We would expect that respondents who have both lower confidence and higher anxiety to have a higher likelihood of having an emergency fund than respondents with higher confidence and/or lower anxiety than them. See Table 6 for logistic regression of interaction terms.
 
-    ## [1] 0.2320714
+The odds ratios in Table 6 show the trend of higher anxiety and/or lower confidence indeed lead to higher odds of having an emergency fund. 
 
-    ## [1] 0.2251923
+Limitations
+This study relied on data that was self-reported through an online environment that was not fully controlled by research administrators beyond the design of the questionnaire. For example, a respondent may feel pressure to answer “Yes'' on the emergency fund question as they may have felt they “should'' have an emergency fund but in fact they do not have one. Also, respondents may not be fully aware of their monthly expenses or may only know an estimated amount. This introduces the possibility of under and over estimating hence under and over exaggerated answers. Lastly, a respondent may have experienced a large financial event (either positive or negative) that may have affected how they answered if the event occurred around the time when they took the survey.
 
-    ## [1] 0.2378071
+Conclusion
+The overall purpose of this study was to add to the literature on financial literacy by studying the relationship between psychological factors and the positive short-term behavior of saving for an emergency fund. In the preliminary research that was done for this research paper psychological factors did not appear to be factored into the models that were assessing financial well-being. Many research papers examined and found many other factors such as objective financial knowledge and subjective financial knowledge as positively associated with positive financial behaviors in the short and long-term. But there did not appear to be any focus on psychological factors, which was what inspired this research paper to focus on, to fill in the missing piece of the financial well-being puzzle. 
+A key finding was the significant, positive relationship found between high anxiety and likelihood of saving for an emergency fund. Other factors such as dissatisfaction with one’s overall financial situation or specifically with debt also appeared to be significantly and positively associated with a higher likelihood of saving for an emergency fund. 
+The key finding factored in with levels of income can help us gain a better understanding as to the reasons why emergency savings are built up. Emergency savings is thought of as a positive financial behavior, which is what many researchers including Henegar and Cude identify it as. But what about the underlying cause or reason why someone would build up an emergency fund. Can we attempt to answer this question? 
+Factoring in what we learned about the negative relationship between higher levels of income and likelihood of having an emergency fund with the psychological factors that this research paper found to associate with that outcome, we can see a plausible causation between lower levels of income, higher anxiety about finances and the likelihood of having an emergency fund. Evidence to further research into this plausible causation can be seen in the rising rates of emergency funds since the Great Recession of 2008-2009. The below graph shows the rising rates of emergency funds collected by the NFCS since 2009 (FINRA, 2018 Report of Findings p.15). This trend along with the variables listed imply that rates of people saving an emergency fund can be an indicator of negative financial health. This article understands this is contradictory to what researchers generally think of an emergency fund as, which is why further research would need to be done to dissect these differences between these variables to gain a better understanding of the cause of rising rates of emergency funds we are seeing in households.
 
-    ## [1] 0.268183
 
-    ## [1] 0.2598679
+References
+Beierlein JJ, Neverett M. Who takes personal finance? Financial Services Review. 2013;22(2):151-171. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=bth&AN=94644713&site=ehost-live
+Despard MR, Friedline T, Martin-West S. Why Do Households Lack Emergency Savings? The Role of Financial Capability. Journal of Family and Economic Issues. 2020;41(3):542-557. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1848145&site=ehost-live 
+Financial Industry Regulatory Authority. (2018). Financial capability in the United States: Report of findings from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads.php NFCS_2018_Report_Natl_Findings.pdf 
+Financial Industry Regulatory Authority. (2018). Financial capability in the United States: State-by-State Survey Methodology from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads/NFCS_2018_State_by_State_Meth.pdf
+Henager, Robin and Cude, Brenda J. Financial Literacy and Long- and Short-Term Financial Behavior in Different Age Groups. Journal of Financial Counseling and Planning Vol 27, 3-19 (2016). https://connect.springerpub.com/content/sgrjfcp/27/1/3
+Henager, R., Cude, B.J. Financial Literacy of High School Graduates: Long- and Short-Term Financial Behavior by Age Group. J Fam Econ Iss 40, 564–575 (2019). https://doi.org/10.1007/s10834-019-09626-2
+Huston SJ. Measuring Financial Literacy. Journal of Consumer Affairs. 2010;44(2):296-316. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1112007&site=ehost-live
+St. Louis Fed, (2020). “Student Loans Owned and Securitized, Outstanding”https://fred.stlouisfed.org/graph/?g=yTyF accessed Dec 18, 2020.
 
-    ## [1] 0.2284568
 
-    ## [1] 0.6698352
 
-    ## [1] 0.380633
 
-    ## [1] 0.3905643
-
-# Preliminary data preparation
-
-## Create new columns of data
-
-``` r
-attach(NFCS_2018_State_Data)
-library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
-#Dep. Var: Emergency Fund
-NFCS_2018_State_Data$EmergencyFund <- as.factor(NFCS_2018_State_Data$J5) 
-levels(NFCS_2018_State_Data$EmergencyFund) <- c("1","0",NA, NA)
-
-#Ind. Var: Financial Condition
-NFCS_2018_State_Data$FinancialCondition <- as.factor(NFCS_2018_State_Data$J1) 
-levels(NFCS_2018_State_Data$FinancialCondition) <- c("1","2","3","4","5","6","7","8","9","10",NA, NA)
-
-#Ind. Var: Anxiety
-NFCS_2018_State_Data$Anxiety <- as.factor(NFCS_2018_State_Data$J33_40)
-levels(NFCS_2018_State_Data$Anxiety) <- c("1","2","3","4","5","6","7",NA, NA)
-
-#Ind. Var: Stress
-NFCS_2018_State_Data$Stress <- as.factor(NFCS_2018_State_Data$J33_41)
-levels(NFCS_2018_State_Data$Stress) <- c("1","2","3","4","5","6","7",NA, NA)
-
-#Ind. Var: Amount of Debt
-NFCS_2018_State_Data$Debt <- as.factor(NFCS_2018_State_Data$G23)
-levels(NFCS_2018_State_Data$Debt) <- c("1","2","3","4","5","6","7",NA, NA)
-
-#Ind. Var: Subjective Financial Knowledge (Confidence)
-NFCS_2018_State_Data$Confidence <- as.factor(NFCS_2018_State_Data$M4)
-levels(NFCS_2018_State_Data$Confidence) <- c("1","2","3","4","5","6","7",NA, NA)
-
-#Demographic variable: Age Group
-NFCS_2018_State_Data$AgeGroup <- as.factor(NFCS_2018_State_Data$A3Ar_w)
-levels(NFCS_2018_State_Data$AgeGroup) <- c("18-24","25-34","35-44","45-54","55-64","65+")
-
-#Demographic variable: Gender
-NFCS_2018_State_Data$Gender <- as.factor(NFCS_2018_State_Data$A3)
-levels(NFCS_2018_State_Data$Gender) <- c("Male","Female")
-
-#Demographic variable: Education Level
-NFCS_2018_State_Data$EducationLevel <- as.factor(NFCS_2018_State_Data$A5_2015)
-levels(NFCS_2018_State_Data$EducationLevel) <- c("Less than College","Less than College", "Less than College", "Some College", "Some College", "College Graduate", "AdvancedDeg")
-
-#Demographic variable: Race (Survey only included White or Non-White)
-NFCS_2018_State_Data$Race <- as.factor(NFCS_2018_State_Data$A4A_new_w)
-levels(NFCS_2018_State_Data$Race) <- c("White","Non-White")
-
-#Demographic variable: Marital Status
-NFCS_2018_State_Data$MaritalStatus <- as.factor(NFCS_2018_State_Data$A6)
-levels(NFCS_2018_State_Data$MaritalStatus) <- c("Married","Not Married","Not Married","Not Married","Not Married")
-
-#Demographic variable: Yes/No for Dependent Children
-NFCS_2018_State_Data$DepChildren <- as.factor(NFCS_2018_State_Data$A11)
-levels(NFCS_2018_State_Data$DepChildren) <- c("Yes","Yes","Yes","Yes","No", "No")
-
-#Demographic variable: Income Groupings
-NFCS_2018_State_Data$Income <- as.factor(NFCS_2018_State_Data$A8)
-levels(NFCS_2018_State_Data$Income) <- c("Less than $25,000","Less than $25,000","$25,000-$50,000","$25,000-$50,000","$50,000-$100,000","$50,000-$100,000","$100,000+","$100,000+")
-
-#Demographic variable: Employment Status
-NFCS_2018_State_Data$Employement <- as.factor(NFCS_2018_State_Data$A9)
-levels(NFCS_2018_State_Data$Employement) <- c("Employed","Employed","Employed","Unemployed","Unemployed","Unemployed","Unemployed","Unemployed")
-
-detach()
-detach()
-```
-
-## Subsetting data
-
-``` r
-attach(NFCS_2018_State_Data)
-use_varb <- ((EmergencyFund == 1) | (EmergencyFund == 0))
-data_use <- subset(NFCS_2018_State_Data, use_varb)
-detach()
-```
-
-## Recoding Ind. Variables in Subsetted Database
-
-``` r
-attach(data_use)
-library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
-#Ind. Var: Financial Condition
-data_use$FinancialCondition <- as.numeric(data_use$FinancialCondition) 
-High_Finances <- ((data_use$FinancialCondition>= 8) & (data_use$FinancialCondition <= 10))
-Moderate_Finances <- ((data_use$FinancialCondition>= 4) & (data_use$FinancialCondition <= 7))
-Low_Finances <- ((data_use$FinancialCondition>= 1) & (data_use$FinancialCondition <= 3))
-FinancesObj <- factor((1*High_Finances + 2*Moderate_Finances + 3*Low_Finances), levels = c(1, 2, 3), labels = c( "HighFinCond", "ModFinCond", "LowFinCond"))
-
-#Ind. Var: Anxiety
-data_use$Anxiety <- as.numeric(data_use$Anxiety)
-High_Anxiety <- ((data_use$Anxiety>= 5) & (data_use$Anxiety <= 7))
-Moderate_Anxiety <- ((data_use$Anxiety > 3) & (data_use$Anxiety < 5))
-Low_Anxiety <- ((data_use$Anxiety>= 1) & (data_use$Anxiety <= 3))
-AnxietyObj <- factor((1*Low_Anxiety + 2*Moderate_Anxiety + 3*High_Anxiety), levels = c(1, 2, 3), labels = c( "LowAnxiety", "ModAnxiety", "HighAnxiety"))
-
-#Ind. Var: Stress
-data_use$Stress <- as.numeric(data_use$Stress)
-High_Stress <- ((data_use$Stress>= 5) & (data_use$Stress <= 7))
-Moderate_Stress <- ((data_use$Stress > 3) & (data_use$Stress < 5))
-Low_Stress <- ((data_use$Stress>= 1) & (data_use$Stress <= 3))
-StressObj <- factor((1*Low_Stress + 2*Moderate_Stress + 3*High_Stress), levels = c(1, 2, 3), labels = c( "LowStress", "ModStress", "HighStress"))
-
-#Ind. Var: Amount of Debt
-data_use$Debt <- as.numeric(data_use$Debt)
-High_Debt <- ((data_use$Debt>= 5) & (data_use$Debt <= 7))
-Moderate_Debt <- ((data_use$Debt > 3) & (data_use$Debt < 5))
-Low_Debt <- ((data_use$Debt>= 1) & (data_use$Debt <= 3))
-DebtObj<- factor((1*Low_Debt + 2*Moderate_Debt + 3*High_Debt), levels = c(1, 2, 3), labels = c( "LowDebt", "ModDebt", "HighDebt"))
-
-#Ind. Var: Subjective Financial Knowledge (Confidence)
-data_use$Confidence <- as.numeric(data_use$Confidence)
-High_Confidence <- ((data_use$Confidence>= 5) & (data_use$Confidence <= 7))
-Moderate_Confidence <- ((data_use$Confidence > 3) & (data_use$Confidence < 5))
-Low_Confidence <- ((data_use$Confidence>= 1) & (data_use$Confidence <= 3))
-ConfidenceObj<- factor((1*High_Confidence + 2*Moderate_Confidence + 3*Low_Confidence), levels = c(1, 2, 3), labels = c( "HighConfidence", "ModConfidence", "LowConfidence"))
-
-
-detach()
-detach()
-```
-
-## TABLE 2. Descriptive Statistics
-
-    ## EmergencyFund
-    ##         1         0 
-    ## 0.5192204 0.4807796
-
-    ## FinancesObj
-    ## HighFinCond  ModFinCond  LowFinCond 
-    ##   0.3250176   0.4175217   0.2574606
-
-    ## AnxietyObj
-    ##  LowAnxiety  ModAnxiety HighAnxiety 
-    ##   0.2878758   0.1734196   0.5387045
-
-    ## StressObj
-    ##  LowStress  ModStress HighStress 
-    ##  0.3635654  0.1932612  0.4431734
-
-    ## DebtObj
-    ##   LowDebt   ModDebt  HighDebt 
-    ## 0.4690100 0.1470806 0.3839094
-
-    ## ConfidenceObj
-    ## HighConfidence  ModConfidence  LowConfidence 
-    ##      0.7381356      0.1616321      0.1002324
-
-    ## EducationLevel
-    ## Less than College      Some College  College Graduate       AdvancedDeg 
-    ##         0.2709026         0.3755898         0.2200480         0.1334597
-
-    ## Gender
-    ##      Male    Female 
-    ## 0.4419909 0.5580091
-
-    ## Race
-    ##     White Non-White 
-    ## 0.7439477 0.2560523
-
-    ## MaritalStatus
-    ##     Married Not Married 
-    ##   0.5355403   0.4644597
-
-    ## DepChildren
-    ##       Yes        No 
-    ## 0.3548225 0.6451775
-
-    ## Employement
-    ##   Employed Unemployed 
-    ##    0.56381    0.43619
-
-    ## Income
-    ## Less than $25,000   $25,000-$50,000  $50,000-$100,000         $100,000+ 
-    ##         0.2112306         0.2518370         0.3392374         0.1976951
-
-    ## AgeGroup
-    ##      18-24      25-34      35-44      45-54      55-64        65+ 
-    ## 0.09954366 0.17170702 0.16683425 0.17263516 0.18373424 0.20554567
-
-# Regressions
-
-## TABLE 3. Logistic Regression with Emergency Fund as Dependent Variable
-
-``` r
-logitmodel <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + DebtObj + ConfidenceObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement, family = binomial, data = data_use)
-summary(logitmodel)
-```
-
-    ## 
-    ## Call:
-    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + DebtObj + 
-    ##     ConfidenceObj + AgeGroup + Gender + Race + MaritalStatus + 
-    ##     DepChildren + EducationLevel + Income + Employement, family = binomial, 
-    ##     data = data_use)
-    ## 
-    ## Deviance Residuals: 
-    ##     Min       1Q   Median       3Q      Max  
-    ## -2.8047  -0.7375  -0.2991   0.7433   2.6525  
-    ## 
-    ## Coefficients:
-    ##                                Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)                    -0.97363    0.09080 -10.723  < 2e-16 ***
-    ## FinancesObjModFinCond           1.06255    0.04036  26.326  < 2e-16 ***
-    ## FinancesObjLowFinCond           2.18829    0.05328  41.068  < 2e-16 ***
-    ## AnxietyObjModAnxiety            0.24827    0.05094   4.874 1.09e-06 ***
-    ## AnxietyObjHighAnxiety           0.40755    0.04278   9.528  < 2e-16 ***
-    ## DebtObjModDebt                  0.73548    0.04690  15.681  < 2e-16 ***
-    ## DebtObjHighDebt                 1.20082    0.03884  30.915  < 2e-16 ***
-    ## ConfidenceObjModConfidence      0.38282    0.04460   8.583  < 2e-16 ***
-    ## ConfidenceObjLowConfidence      0.68198    0.06443  10.584  < 2e-16 ***
-    ## AgeGroup25-34                  -0.14810    0.06509  -2.275  0.02289 *  
-    ## AgeGroup35-44                   0.06771    0.06697   1.011  0.31197    
-    ## AgeGroup45-54                   0.14309    0.06618   2.162  0.03061 *  
-    ## AgeGroup55-64                  -0.15597    0.06594  -2.365  0.01802 *  
-    ## AgeGroup65+                    -0.46988    0.06946  -6.765 1.34e-11 ***
-    ## GenderFemale                    0.08665    0.03331   2.602  0.00928 ** 
-    ## RaceNon-White                  -0.03512    0.03785  -0.928  0.35347    
-    ## MaritalStatusNot Married        0.06984    0.03772   1.852  0.06406 .  
-    ## DepChildrenNo                  -0.20377    0.03879  -5.254 1.49e-07 ***
-    ## EducationLevelSome College     -0.21170    0.04138  -5.116 3.12e-07 ***
-    ## EducationLevelCollege Graduate -0.56776    0.04844 -11.720  < 2e-16 ***
-    ## EducationLevelAdvancedDeg      -0.58735    0.05935  -9.896  < 2e-16 ***
-    ## Income$25,000-$50,000          -0.54758    0.05057 -10.829  < 2e-16 ***
-    ## Income$50,000-$100,000         -0.95619    0.05220 -18.319  < 2e-16 ***
-    ## Income$100,000+                -1.27283    0.06417 -19.834  < 2e-16 ***
-    ## EmployementUnemployed           0.10879    0.03949   2.755  0.00586 ** 
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## (Dispersion parameter for binomial family taken to be 1)
-    ## 
-    ##     Null deviance: 34355  on 24828  degrees of freedom
-    ## Residual deviance: 23527  on 24804  degrees of freedom
-    ##   (1029 observations deleted due to missingness)
-    ## AIC: 23577
-    ## 
-    ## Number of Fisher Scoring iterations: 5
-
-``` r
-car::vif(logitmodel)
-```
-
-    ##                    GVIF Df GVIF^(1/(2*Df))
-    ## FinancesObj    1.198781  2        1.046369
-    ## AnxietyObj     1.233070  2        1.053773
-    ## DebtObj        1.243654  2        1.056027
-    ## ConfidenceObj  1.116856  2        1.028015
-    ## AgeGroup       1.852139  5        1.063573
-    ## Gender         1.051232  1        1.025296
-    ## Race           1.076630  1        1.037608
-    ## MaritalStatus  1.359691  1        1.166058
-    ## DepChildren    1.355707  1        1.164348
-    ## EducationLevel 1.186241  3        1.028874
-    ## Income         1.550071  3        1.075784
-    ## Employement    1.424598  1        1.193565
-
-``` r
-exp(coefficients(logitmodel))
-```
-
-    ##                    (Intercept)          FinancesObjModFinCond 
-    ##                      0.3777086                      2.8937295 
-    ##          FinancesObjLowFinCond           AnxietyObjModAnxiety 
-    ##                      8.9199528                      1.2818045 
-    ##          AnxietyObjHighAnxiety                 DebtObjModDebt 
-    ##                      1.5031297                      2.0864867 
-    ##                DebtObjHighDebt     ConfidenceObjModConfidence 
-    ##                      3.3228297                      1.4664139 
-    ##     ConfidenceObjLowConfidence                  AgeGroup25-34 
-    ##                      1.9777837                      0.8623471 
-    ##                  AgeGroup35-44                  AgeGroup45-54 
-    ##                      1.0700565                      1.1538289 
-    ##                  AgeGroup55-64                    AgeGroup65+ 
-    ##                      0.8555853                      0.6250790 
-    ##                   GenderFemale                  RaceNon-White 
-    ##                      1.0905168                      0.9654920 
-    ##       MaritalStatusNot Married                  DepChildrenNo 
-    ##                      1.0723382                      0.8156486 
-    ##     EducationLevelSome College EducationLevelCollege Graduate 
-    ##                      0.8092072                      0.5667949 
-    ##      EducationLevelAdvancedDeg          Income$25,000-$50,000 
-    ##                      0.5558006                      0.5783460 
-    ##         Income$50,000-$100,000                Income$100,000+ 
-    ##                      0.3843558                      0.2800381 
-    ##          EmployementUnemployed 
-    ##                      1.1149334
-
-## TABLE 4. Logistic Regression with Emergency Fund as Dependent Variable, Demo Variables removed
-
-``` r
-logitmodel2 <- glm(EmergencyFund ~ FinancesObj + AnxietyObj + DebtObj + ConfidenceObj, family = binomial, data = data_use)
-summary(logitmodel2)
-```
-
-    ## 
-    ## Call:
-    ## glm(formula = EmergencyFund ~ FinancesObj + AnxietyObj + DebtObj + 
-    ##     ConfidenceObj, family = binomial, data = data_use)
-    ## 
-    ## Deviance Residuals: 
-    ##     Min       1Q   Median       3Q      Max  
-    ## -2.4103  -0.8477  -0.4265   0.7951   2.2101  
-    ## 
-    ## Coefficients:
-    ##                            Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)                -2.35134    0.04032 -58.314  < 2e-16 ***
-    ## FinancesObjModFinCond       1.18041    0.03863  30.556  < 2e-16 ***
-    ## FinancesObjLowFinCond       2.53637    0.05083  49.902  < 2e-16 ***
-    ## AnxietyObjModAnxiety        0.34319    0.04887   7.023 2.18e-12 ***
-    ## AnxietyObjHighAnxiety       0.52042    0.04070  12.785  < 2e-16 ***
-    ## DebtObjModDebt              0.80437    0.04491  17.910  < 2e-16 ***
-    ## DebtObjHighDebt             1.16965    0.03650  32.044  < 2e-16 ***
-    ## ConfidenceObjModConfidence  0.52570    0.04299  12.228  < 2e-16 ***
-    ## ConfidenceObjLowConfidence  0.97334    0.06219  15.650  < 2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## (Dispersion parameter for binomial family taken to be 1)
-    ## 
-    ##     Null deviance: 34355  on 24828  degrees of freedom
-    ## Residual deviance: 24854  on 24820  degrees of freedom
-    ##   (1029 observations deleted due to missingness)
-    ## AIC: 24872
-    ## 
-    ## Number of Fisher Scoring iterations: 4
-
-``` r
-car::vif(logitmodel2)
-```
-
-    ##                   GVIF Df GVIF^(1/(2*Df))
-    ## FinancesObj   1.141337  2        1.033602
-    ## AnxietyObj    1.190405  2        1.044537
-    ## DebtObj       1.158741  2        1.037520
-    ## ConfidenceObj 1.067964  2        1.016574
-
-``` r
-exp(coefficients(logitmodel2))
-```
-
-    ##                (Intercept)      FinancesObjModFinCond 
-    ##                 0.09524106                 3.25569482 
-    ##      FinancesObjLowFinCond       AnxietyObjModAnxiety 
-    ##                12.63372582                 1.40944346 
-    ##      AnxietyObjHighAnxiety             DebtObjModDebt 
-    ##                 1.68272738                 2.23528525 
-    ##            DebtObjHighDebt ConfidenceObjModConfidence 
-    ##                 3.22087202                 1.69165022 
-    ## ConfidenceObjLowConfidence 
-    ##                 2.64676023
-
-## TABLE 5. Logistic Regression with Emergency Fund as Dependent Variable
-
-``` r
-logitmodel3 <- glm(EmergencyFund ~ Income, family = binomial, data = data_use)
-summary(logitmodel3)
-```
-
-    ## 
-    ## Call:
-    ## glm(formula = EmergencyFund ~ Income, family = binomial, data = data_use)
-    ## 
-    ## Deviance Residuals: 
-    ##     Min       1Q   Median       3Q      Max  
-    ## -1.6818  -0.9901  -0.7406   1.0702   1.6899  
-    ## 
-    ## Coefficients:
-    ##                        Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)             1.13557    0.03154   36.00   <2e-16 ***
-    ## Income$25,000-$50,000  -0.87801    0.04024  -21.82   <2e-16 ***
-    ## Income$50,000-$100,000 -1.59348    0.03841  -41.49   <2e-16 ***
-    ## Income$100,000+        -2.28919    0.04547  -50.34   <2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## (Dispersion parameter for binomial family taken to be 1)
-    ## 
-    ##     Null deviance: 35809  on 25857  degrees of freedom
-    ## Residual deviance: 32324  on 25854  degrees of freedom
-    ## AIC: 32332
-    ## 
-    ## Number of Fisher Scoring iterations: 4
-
-``` r
-exp(coefficients(logitmodel3))
-```
-
-    ##            (Intercept)  Income$25,000-$50,000 Income$50,000-$100,000 
-    ##              3.1129518              0.4156073              0.2032179 
-    ##        Income$100,000+ 
-    ##              0.1013480
-
-## TABLE 6. Logistic Model with Interaction between Anxiety and Confidence
-
-``` r
-interactionmodel1 <- glm(EmergencyFund ~ AnxietyObj:ConfidenceObj + FinancesObj + DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + EducationLevel + Income + Employement, family = binomial, data = data_use)
-summary(interactionmodel1)
-```
-
-    ## 
-    ## Call:
-    ## glm(formula = EmergencyFund ~ AnxietyObj:ConfidenceObj + FinancesObj + 
-    ##     DebtObj + AgeGroup + Gender + Race + MaritalStatus + DepChildren + 
-    ##     EducationLevel + Income + Employement, family = binomial, 
-    ##     data = data_use)
-    ## 
-    ## Deviance Residuals: 
-    ##     Min       1Q   Median       3Q      Max  
-    ## -2.7990  -0.7370  -0.2968   0.7432   2.6601  
-    ## 
-    ## Coefficients: (1 not defined because of singularities)
-    ##                                                   Estimate Std. Error z value
-    ## (Intercept)                                        0.09784    0.11290   0.867
-    ## FinancesObjModFinCond                              1.06061    0.04038  26.263
-    ## FinancesObjLowFinCond                              2.18658    0.05333  41.003
-    ## DebtObjModDebt                                     0.73495    0.04691  15.667
-    ## DebtObjHighDebt                                    1.19985    0.03885  30.885
-    ## AgeGroup25-34                                     -0.14687    0.06508  -2.257
-    ## AgeGroup35-44                                      0.06934    0.06696   1.036
-    ## AgeGroup45-54                                      0.14483    0.06618   2.188
-    ## AgeGroup55-64                                     -0.15441    0.06594  -2.342
-    ## AgeGroup65+                                       -0.46898    0.06945  -6.753
-    ## GenderFemale                                       0.08746    0.03331   2.625
-    ## RaceNon-White                                     -0.03607    0.03785  -0.953
-    ## MaritalStatusNot Married                           0.07022    0.03773   1.861
-    ## DepChildrenNo                                     -0.20332    0.03881  -5.239
-    ## EducationLevelSome College                        -0.21147    0.04138  -5.110
-    ## EducationLevelCollege Graduate                    -0.56667    0.04846 -11.693
-    ## EducationLevelAdvancedDeg                         -0.58451    0.05939  -9.842
-    ## Income$25,000-$50,000                             -0.54705    0.05056 -10.819
-    ## Income$50,000-$100,000                            -0.95516    0.05219 -18.300
-    ## Income$100,000+                                   -1.27104    0.06418 -19.804
-    ## EmployementUnemployed                              0.11016    0.03950   2.789
-    ## AnxietyObjLowAnxiety:ConfidenceObjHighConfidence  -1.09644    0.08488 -12.917
-    ## AnxietyObjModAnxiety:ConfidenceObjHighConfidence  -0.80992    0.08664  -9.348
-    ## AnxietyObjHighAnxiety:ConfidenceObjHighConfidence -0.66092    0.07784  -8.491
-    ## AnxietyObjLowAnxiety:ConfidenceObjModConfidence   -0.54990    0.12297  -4.472
-    ## AnxietyObjModAnxiety:ConfidenceObjModConfidence   -0.51436    0.11330  -4.540
-    ## AnxietyObjHighAnxiety:ConfidenceObjModConfidence  -0.29432    0.08781  -3.352
-    ## AnxietyObjLowAnxiety:ConfidenceObjLowConfidence   -0.35504    0.15892  -2.234
-    ## AnxietyObjModAnxiety:ConfidenceObjLowConfidence   -0.11006    0.17217  -0.639
-    ## AnxietyObjHighAnxiety:ConfidenceObjLowConfidence        NA         NA      NA
-    ##                                                   Pr(>|z|)    
-    ## (Intercept)                                       0.386138    
-    ## FinancesObjModFinCond                              < 2e-16 ***
-    ## FinancesObjLowFinCond                              < 2e-16 ***
-    ## DebtObjModDebt                                     < 2e-16 ***
-    ## DebtObjHighDebt                                    < 2e-16 ***
-    ## AgeGroup25-34                                     0.024019 *  
-    ## AgeGroup35-44                                     0.300361    
-    ## AgeGroup45-54                                     0.028640 *  
-    ## AgeGroup55-64                                     0.019203 *  
-    ## AgeGroup65+                                       1.45e-11 ***
-    ## GenderFemale                                      0.008658 ** 
-    ## RaceNon-White                                     0.340634    
-    ## MaritalStatusNot Married                          0.062682 .  
-    ## DepChildrenNo                                     1.61e-07 ***
-    ## EducationLevelSome College                        3.22e-07 ***
-    ## EducationLevelCollege Graduate                     < 2e-16 ***
-    ## EducationLevelAdvancedDeg                          < 2e-16 ***
-    ## Income$25,000-$50,000                              < 2e-16 ***
-    ## Income$50,000-$100,000                             < 2e-16 ***
-    ## Income$100,000+                                    < 2e-16 ***
-    ## EmployementUnemployed                             0.005291 ** 
-    ## AnxietyObjLowAnxiety:ConfidenceObjHighConfidence   < 2e-16 ***
-    ## AnxietyObjModAnxiety:ConfidenceObjHighConfidence   < 2e-16 ***
-    ## AnxietyObjHighAnxiety:ConfidenceObjHighConfidence  < 2e-16 ***
-    ## AnxietyObjLowAnxiety:ConfidenceObjModConfidence   7.76e-06 ***
-    ## AnxietyObjModAnxiety:ConfidenceObjModConfidence   5.63e-06 ***
-    ## AnxietyObjHighAnxiety:ConfidenceObjModConfidence  0.000803 ***
-    ## AnxietyObjLowAnxiety:ConfidenceObjLowConfidence   0.025477 *  
-    ## AnxietyObjModAnxiety:ConfidenceObjLowConfidence   0.522677    
-    ## AnxietyObjHighAnxiety:ConfidenceObjLowConfidence        NA    
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## (Dispersion parameter for binomial family taken to be 1)
-    ## 
-    ##     Null deviance: 34355  on 24828  degrees of freedom
-    ## Residual deviance: 23524  on 24800  degrees of freedom
-    ##   (1029 observations deleted due to missingness)
-    ## AIC: 23582
-    ## 
-    ## Number of Fisher Scoring iterations: 5
-
-``` r
-exp(coefficients(interactionmodel1))
-```
-
-    ##                                       (Intercept) 
-    ##                                         1.1027865 
-    ##                             FinancesObjModFinCond 
-    ##                                         2.8881188 
-    ##                             FinancesObjLowFinCond 
-    ##                                         8.9047294 
-    ##                                    DebtObjModDebt 
-    ##                                         2.0853796 
-    ##                                   DebtObjHighDebt 
-    ##                                         3.3196200 
-    ##                                     AgeGroup25-34 
-    ##                                         0.8634095 
-    ##                                     AgeGroup35-44 
-    ##                                         1.0718034 
-    ##                                     AgeGroup45-54 
-    ##                                         1.1558451 
-    ##                                     AgeGroup55-64 
-    ##                                         0.8569210 
-    ##                                       AgeGroup65+ 
-    ##                                         0.6256425 
-    ##                                      GenderFemale 
-    ##                                         1.0913936 
-    ##                                     RaceNon-White 
-    ##                                         0.9645752 
-    ##                          MaritalStatusNot Married 
-    ##                                         1.0727491 
-    ##                                     DepChildrenNo 
-    ##                                         0.8160157 
-    ##                        EducationLevelSome College 
-    ##                                         0.8093941 
-    ##                    EducationLevelCollege Graduate 
-    ##                                         0.5674093 
-    ##                         EducationLevelAdvancedDeg 
-    ##                                         0.5573771 
-    ##                             Income$25,000-$50,000 
-    ##                                         0.5786543 
-    ##                            Income$50,000-$100,000 
-    ##                                         0.3847504 
-    ##                                   Income$100,000+ 
-    ##                                         0.2805387 
-    ##                             EmployementUnemployed 
-    ##                                         1.1164594 
-    ##  AnxietyObjLowAnxiety:ConfidenceObjHighConfidence 
-    ##                                         0.3340586 
-    ##  AnxietyObjModAnxiety:ConfidenceObjHighConfidence 
-    ##                                         0.4448915 
-    ## AnxietyObjHighAnxiety:ConfidenceObjHighConfidence 
-    ##                                         0.5163762 
-    ##   AnxietyObjLowAnxiety:ConfidenceObjModConfidence 
-    ##                                         0.5770061 
-    ##   AnxietyObjModAnxiety:ConfidenceObjModConfidence 
-    ##                                         0.5978815 
-    ##  AnxietyObjHighAnxiety:ConfidenceObjModConfidence 
-    ##                                         0.7450349 
-    ##   AnxietyObjLowAnxiety:ConfidenceObjLowConfidence 
-    ##                                         0.7011453 
-    ##   AnxietyObjModAnxiety:ConfidenceObjLowConfidence 
-    ##                                         0.8957827 
-    ##  AnxietyObjHighAnxiety:ConfidenceObjLowConfidence 
-    ##                                                NA
