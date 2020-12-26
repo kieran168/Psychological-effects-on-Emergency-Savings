@@ -112,7 +112,7 @@ Beierlein JJ, Neverett M. Who takes personal finance? Financial Services Review.
 
 Despard MR, Friedline T, Martin-West S. Why Do Households Lack Emergency Savings? The Role of Financial Capability. Journal of Family and Economic Issues. 2020;41(3):542-557. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=ecn&AN=1848145&site=ehost-live 
 
-Financial Industry Regulatory Authority. (2018). Financial capability in the United States: Report of findings from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads.php NFCS_2018_Report_Natl_Findings.pdf
+Financial Industry Regulatory Authority. (2018). Financial capability in the United States: Report of findings from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads/NFCS_2018_Report_Natl_Findings.pdf
 
 Financial Industry Regulatory Authority. (2018). Financial capability in the United States: State-by-State Survey Methodology from the 2018 National Financial Capability Study. FINRA Investor Education Foundation. Retrieved from https://www.usfinancialcapability.org/downloads/NFCS_2018_State_by_State_Meth.pdf
 
