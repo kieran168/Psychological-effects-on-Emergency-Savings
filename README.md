@@ -105,7 +105,7 @@ The key finding factored in with levels of income can help us gain a better unde
 
 Factoring in what we learned about the negative relationship between higher levels of income and likelihood of having an emergency fund with the psychological factors that this research paper found to associate with that outcome, we can see a plausible causation between lower levels of income, higher anxiety about finances and the likelihood of having an emergency fund. Evidence to further research into this plausible causation can be seen in the rising rates of emergency funds since the Great Recession of 2008-2009. The below graph shows the rising rates of emergency funds collected by the NFCS since 2009 (FINRA, 2018 Report of Findings p.15). This trend along with the variables listed imply that rates of people saving an emergency fund can be an indicator of negative financial health. This article understands this is contradictory to what researchers generally think of an emergency fund as, which is why further research would need to be done to dissect these differences between these variables to gain a better understanding of the cause of rising rates of emergency funds we are seeing in households.
 
-![2009-2018 Emergency Fund](./2009-2018 Emergency Fund.png)
+![2009-2018 Emergency Fund](./Emergency_Fund_Rate_2009-2018.png)
 
 # References
 Beierlein JJ, Neverett M. Who takes personal finance? Financial Services Review. 2013;22(2):151-171. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=bth&AN=94644713&site=ehost-live
