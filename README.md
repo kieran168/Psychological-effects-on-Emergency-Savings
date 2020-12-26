@@ -21,15 +21,15 @@ Based on the above discussion, the following hypothesis was tested:
 After controlling for other demographic characteristics, high stress and high anxiety positively predict a person to have an emergency fund.
 
 # Methods 
-## Data and Sample
+## *Data and Sample*
 The dataset this article uses is from the National Financial Capability Study (NFCS) which was funded by the FINRA Investor Education Foundation and conducted by ARC Research. The data can be downloaded here: https://www.usfinancialcapability.org/downloads.php. This study has been conducted in 2009, 2012, 2015, and 2018. We will be using the 2018 dataset. This data was collected by the FINRA foundation through ARC Research online from June through October 2018 among a nationally-representative sample of 27,091 American adults, reaching approximately 500 individuals per state, plus the District of Columbia (FINRA, 2018). The final sample used was 25,858 as the observations who answered “Don't know" or "Prefer not to say" to the emergency fund question were excluded.
 
-## Dependent Variable
+## *Dependent Variable*
 Descriptions of dependent and independent variables used in this research are detailed in Table 1.
 
 The dependent variable will be question #J5 in the 2018 NFCS survey: Have you set aside emergency or rainy day funds that would cover your expenses for 3 months, in case of sickness, job loss, economic downturn, or other emergencies? The available answers were: "Yes," "No," "Don't know," and "Prefer not to say." A binary variable was created where "1" corresponding to "Yes" and "0" corresponding to "No" this individual did not have an emergency fund. Responses where the answers were "Don't know" or "Prefer not to say" were not included in the analysis.
 
-## Independent Variables
+## *Independent Variables*
 The primary focus of this research are the psychological factors such as stress and anxiety that can affect financial behavior. In the survey, four questions were asked of the respondents that focused on how they felt about their finances and how thinking or talking about their finances made them feel.
 
 The first question asks the respondent to think about their assets, debts and savings and to rate on a scale of 1 (Not At All Satisfied) to 10 (Extremely Satisfied) how satisfied they were with their current financial situation. This question appears to be rating how well a respondent is doing in financial terms by asking about assets, debts and savings, but it is actually asking how satisfied the respondent is with their own personal financial situation. So someone who has a high income can still give a low satisfaction rating when in fact they could be financially better off than a low income respondent who rates themselves with a higher satisfaction rating. 
@@ -42,11 +42,11 @@ These four questions along with underlying demographic characteristics will help
 
 A final variable of subjective financial knowledge (confidence) is included as an independent variable into this research so that we can see the interaction effects with one of our key independent variables related to anxiety. Subjective financial knowledge has already been concluded by Henegar and Cude in their two studies to be positively associated with short-term financial behaviors, of which the three-month emergency fund question that is being studied here in this research is included in (Henagar & Cude, 2016, p.7) (Henagar & Cude, 2019, p.567).
 
-## Multicollinearity
+## *Multicollinearity*
 Of these five key independent variables, the questions asking about “stress” and “anxiety” had some correlations with one another, indicating that these two questions were possibly measuring the same thing. The correlation coefficient was 0.67. This means that both variables had some correlation with each other. Further checks for multicollinearity were done on the independent variables being included using Generalized Variance Inflation Factor (GVIF) and found the anxiety question to have a GVIF of 2.50 and the Stress question to have a GVIF of 2.44. Also, these two questions were grouped together under the same question (“How Strongly do you agree or disagree with the following statements?”) as sub-questions. Lastly, the proportion of respondent’s answers to these two questions were similar in the high, moderate and low categories (High/Medium/Low - Anxiety:0.54/0.17/0.29; Stress 0.44/0.19/0.37). So based on these points we will exclude one of the two questions from the statistical models as both appear too similar. The stress question will be excluded as the framing of that question includes the words “make my heart race” which seems more specific than the anxious question at assessing the respondent's psychological mindset. While the aim of this research study is to assess on a general level of psychological stress/anxiety.
 
 
-## Data Analysis Procedures
+## *Data Analysis Procedures*
 A logistic regression is used in this research, with the emergency fund question as the dependent variable coded as a binary variable of “1” for “Yes” and “0” for “No” and the four independent variables as regressors along with other demographic data. As our dependent variable is categorical, a logistic regression is used so that we can see the likelihood of a respondent having an emergency fund based on the answers they provided on the four key independent variables. The Generalized Variance Inflation Factor was also run to check for multicollinearity among the four key independent variables and demographic variables and there appears to be no multicollinearity amongst the variables with GVIF scores ranging from 1.05 - 1.85.
 
 Since we have coded the scales (1-10 & 1-7) into three categories for each question into Low, Moderate or High, one of the three will be dropped when the logistic regression is run so that one serves as the reference group the other two will be compared to. In order to address the hypothesis, we will be choosing which of the three variables will drop that is of least importance to addressing the hypothesis. Namely, for the financial condition question, we will let the regression drop “High Satisfaction” as a respondent who is highly satisfied with their financial condition does not fit within the hypothesis’ scope of stress, anxiety and worrying psychological factors. For the anxiety question, we will let “Low Anxiety” drop. For the debt question, we will let “Low Debt” drop. And for the confidence question, we will let “High Confidence” drop.
@@ -56,7 +56,7 @@ First, a logistic regression was run on the four key independent variables along
 Next, we will run the logistic regression with an interaction term between the subjective financial knowledge (confidence) variable and the variable assessing a respondent’s overall financial condition. This will help us see how confidence in a respondent’s own financial knowledge relates to how satisfied they are with their financial situation and how that helps determine their likelihood of having an emergency fund.
 
 
-## Descriptive Statistics
+## *Descriptive Statistics*
 Descriptive statistics are reported in Table 2. 
 
 About half (52%) of the sample stated they had a set aside three months of expenses as an emergency fund. For the question about satisfaction with their financial condition, exactly a third (33%) stated they were highly satisfied with their financial situation and a little less than a third (26%) stated they leaned towards not satisfied at all. But most answered that they were moderately satisfied at 42%. The question on anxiety had the largest share of “High” ratings at 54% of all the four questions we included in our research. This means they rated their anxiety between 5-7 on a scale of 1-7. For the question about their assessment of how they feel about their debt, a majority indicated they either agree or disagree. 38% leaned towards agree and 47% leaned towards disagree. Only 15% of people felt indifferent about their debt. As for the last question on how confident a respondent was about their overall financial knowledge, most rated themselves a 5-7 on a scale from 1-7 at 74%. This appears quite high but could also be attributable to the overconfidence bias. 
@@ -64,7 +64,7 @@ About half (52%) of the sample stated they had a set aside three months of expen
 
 
 # Results
-## Psychological effects on likelihood of having an emergency fund
+## *Psychological effects on likelihood of having an emergency fund*
 Table 3 reports the results of the logistic regression run on the full sample but specifically for the independent variables. The independent variables we chose to represent the psychological factors that we were assessing for predicting power appear to be significant and able to predict that a person who shows high anxiety about their finances, low satisfaction with their finances and/or feelings of too much debt has an emergency fund. 
 The regression results appear to show that those who are under psychological anxiety, are feeling low about their financial condition or feel they have too much debt have higher odds of having an emergency fund. The respondents who reported “High” anxiety appear to have 50% higher odds than someone who reported “Low” anxiety to have an emergency fund. While someone who reported to be feeling “Low” about their overall financial condition has 8.92 times higher odds than someone who feels “High” about their overall financial condition. And someone who answered “High” on the debt question has 3.32 times higher odds than someone who reported “Low” to that question to have an emergency fund.
 The hypothesis of psychological factors such as high anxiety being a predictor variable for the presence of an emergency fund appears to be supported.
