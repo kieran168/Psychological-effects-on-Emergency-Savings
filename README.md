@@ -46,6 +46,7 @@ A final variable of subjective financial knowledge (confidence) is included as a
 ## *Multicollinearity*
 Of these five key independent variables, the questions asking about “stress” and “anxiety” had some correlations with one another, indicating that these two questions were possibly measuring the same thing. The correlation coefficient was 0.67. This means that both variables had some correlation with each other. Further checks for multicollinearity were done on the independent variables being included using Generalized Variance Inflation Factor (GVIF) and found the anxiety question to have a GVIF of 2.50 and the Stress question to have a GVIF of 2.44. Also, these two questions were grouped together under the same question (“How Strongly do you agree or disagree with the following statements?”) as sub-questions. Lastly, the proportion of respondent’s answers to these two questions were similar in the high, moderate and low categories (High/Medium/Low - Anxiety:0.54/0.17/0.29; Stress 0.44/0.19/0.37). So based on these points we will exclude one of the two questions from the statistical models as both appear too similar. The stress question will be excluded as the framing of that question includes the words “make my heart race” which seems more specific than the anxious question at assessing the respondent's psychological mindset. While the aim of this research study is to assess on a general level of psychological stress/anxiety.
 
+![Table 1](./Table1.jpg)
 
 ## *Data Analysis Procedures*
 A logistic regression is used in this research, with the emergency fund question as the dependent variable coded as a binary variable of “1” for “Yes” and “0” for “No” and the four independent variables as regressors along with other demographic data. As our dependent variable is categorical, a logistic regression is used so that we can see the likelihood of a respondent having an emergency fund based on the answers they provided on the four key independent variables. The Generalized Variance Inflation Factor was also run to check for multicollinearity among the four key independent variables and demographic variables and there appears to be no multicollinearity amongst the variables with GVIF scores ranging from 1.05 - 1.85.
@@ -62,21 +63,33 @@ Descriptive statistics are reported in Table 2.
 
 About half (52%) of the sample stated they had a set aside three months of expenses as an emergency fund. For the question about satisfaction with their financial condition, exactly a third (33%) stated they were highly satisfied with their financial situation and a little less than a third (26%) stated they leaned towards not satisfied at all. But most answered that they were moderately satisfied at 42%. The question on anxiety had the largest share of “High” ratings at 54% of all the four questions we included in our research. This means they rated their anxiety between 5-7 on a scale of 1-7. For the question about their assessment of how they feel about their debt, a majority indicated they either agree or disagree. 38% leaned towards agree and 47% leaned towards disagree. Only 15% of people felt indifferent about their debt. As for the last question on how confident a respondent was about their overall financial knowledge, most rated themselves a 5-7 on a scale from 1-7 at 74%. This appears quite high but could also be attributable to the overconfidence bias. 
 
-
+![Table 2](./Table2.jpg)
 
 # Results
 ## *Psychological effects on likelihood of having an emergency fund*
 Table 3 reports the results of the logistic regression run on the full sample but specifically for the independent variables. The independent variables we chose to represent the psychological factors that we were assessing for predicting power appear to be significant and able to predict that a person who shows high anxiety about their finances, low satisfaction with their finances and/or feelings of too much debt has an emergency fund. 
+
 The regression results appear to show that those who are under psychological anxiety, are feeling low about their financial condition or feel they have too much debt have higher odds of having an emergency fund. The respondents who reported “High” anxiety appear to have 50% higher odds than someone who reported “Low” anxiety to have an emergency fund. While someone who reported to be feeling “Low” about their overall financial condition has 8.92 times higher odds than someone who feels “High” about their overall financial condition. And someone who answered “High” on the debt question has 3.32 times higher odds than someone who reported “Low” to that question to have an emergency fund.
+
 The hypothesis of psychological factors such as high anxiety being a predictor variable for the presence of an emergency fund appears to be supported.
+
+![Table 3](./Table3.jpg)
 
 To further check this pattern of relationships, the logistic regression was run again but with all other variables removed except for the four key variables displayed in Table 3. The results are displayed in Table 4 and the pattern of relationships appears to hold. 
 
+![Table 4](./Table4.jpg)
+
 As a robustness check against the model, we run another logistic regression with emergency fund as the dependent variable and the income groups as the independent variable. This will allow us to check if the opposite of our model of high anxiety and high debt is also true - those respondents with higher incomes will most likely not have a need for an emergency fund. We can see from this crosstab of the overall financial condition and income that lower incomes report closer towards the “1” range while those with higher incomes tend to report closer to “10” for the overall financial condition question.
+
+![Table 5a](./Table5a.jpg)
+
+![Table 5](./Table5.jpg)
 
 The robustness check performed using incomes is displayed in Table 5 along with the crosstab in Table 5a. These tables confirm that as incomes increase, the odds drop dramatically for respondents to have an emergency fund. 
 
 Next, we adjusted our model to include interaction terms to see the relationship between the subjective financial knowledge (confidence) variable with the anxiety variable. The confidence variable has already been tested by Henegar and Cude in their 2016 and 2019 study of the NFCS data where they found confidence in financial knowledge to be positively associated with positive short-term financial behavior (Henegar and Cude, 2016 p.12 & 2019 p.569). We would expect that respondents who have both lower confidence and higher anxiety to have a higher likelihood of having an emergency fund than respondents with higher confidence and/or lower anxiety than them. See Table 6 for logistic regression of interaction terms.
+
+![Table 6](./Table6.jpg)
 
 The odds ratios in Table 6 show the trend of higher anxiety and/or lower confidence indeed lead to higher odds of having an emergency fund. 
 
@@ -92,6 +105,7 @@ The key finding factored in with levels of income can help us gain a better unde
 
 Factoring in what we learned about the negative relationship between higher levels of income and likelihood of having an emergency fund with the psychological factors that this research paper found to associate with that outcome, we can see a plausible causation between lower levels of income, higher anxiety about finances and the likelihood of having an emergency fund. Evidence to further research into this plausible causation can be seen in the rising rates of emergency funds since the Great Recession of 2008-2009. The below graph shows the rising rates of emergency funds collected by the NFCS since 2009 (FINRA, 2018 Report of Findings p.15). This trend along with the variables listed imply that rates of people saving an emergency fund can be an indicator of negative financial health. This article understands this is contradictory to what researchers generally think of an emergency fund as, which is why further research would need to be done to dissect these differences between these variables to gain a better understanding of the cause of rising rates of emergency funds we are seeing in households.
 
+![2009-2018 Emergency Fund](./2009-2018 Emergency Fund.png)
 
 # References
 Beierlein JJ, Neverett M. Who takes personal finance? Financial Services Review. 2013;22(2):151-171. Accessed December 18, 2020. https://search-ebscohost-com.ccny-proxy1.libr.ccny.cuny.edu/login.aspx?direct=true&db=bth&AN=94644713&site=ehost-live
