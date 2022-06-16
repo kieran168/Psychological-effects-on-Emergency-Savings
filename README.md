@@ -1,3 +1,5 @@
+# Psychological effects on likelihood of having an emergency fund
+
 # Introduction
 The purpose of this study was to examine the relationship between psychological factors such as stress or anxiety and the positive financial behavior of having three months of expenses in an emergency or rainy day fund. Psychological factors were measured as responses to four questions in the National Financial Capability Study (NFCS) survey. The questions covered satisfaction with financial condition, anxiety when thinking about finances, how respondents felt about their level of debt and how confident they were in their financial knowledge. The findings were that these psychological factors appear to be good predictors of a respondent having an emergency fund.
 
